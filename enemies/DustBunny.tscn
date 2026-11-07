@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c8d220k74p1h4"]
+
+[ext_resource type="Script" uid="uid://d3g65ngo6ck1" path="res://enemies/bouncy.gd" id="1_2iff2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1e8py"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skrcp"]
+albedo_color = Color(0.07815006, 0.07815, 1.2032688e-08, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_1e8py"]
+material = SubResource("StandardMaterial3D_skrcp")
+radius = 0.25
+height = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6i1v"]
+albedo_color = Color(1, 1, 0, 1)
+emission_enabled = true
+emission = Color(0, 1, 0, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_3hqqi"]
+material = SubResource("StandardMaterial3D_c6i1v")
+radius = 0.05
+height = 0.1
+
+[sub_resource type="TorusMesh" id="TorusMesh_5m2fx"]
+material = SubResource("StandardMaterial3D_c6i1v")
+inner_radius = 0.07
+outer_radius = 0.183
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5m2fx"]
+radius = 0.25
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1e8py"]
+radius = 0.3
+
+[node name="DustBunny" type="RigidBody3D" unique_id=1832415645]
+physics_material_override = SubResource("PhysicsMaterial_1e8py")
+linear_damp_mode = 1
+script = ExtResource("1_2iff2")
+
+[node name="Ball" type="MeshInstance3D" parent="." unique_id=793058813]
+mesh = SubResource("SphereMesh_1e8py")
+
+[node name="Eye1" type="MeshInstance3D" parent="." unique_id=730451261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06511697, 0.07676375, 0.17843404)
+mesh = SubResource("SphereMesh_3hqqi")
+
+[node name="Eye2" type="MeshInstance3D" parent="." unique_id=1779681755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05251112, 0.10501842, 0.17611043)
+mesh = SubResource("SphereMesh_3hqqi")
+
+[node name="Mouth" type="MeshInstance3D" parent="." unique_id=1443201727]
+transform = Transform3D(1, 0, 0, 0, 0.61901575, -0.78537846, 0, 0.78537846, 0.61901575, 0, 0.05734186, 0.13414441)
+mesh = SubResource("TorusMesh_5m2fx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1172073843]
+shape = SubResource("SphereShape3D_5m2fx")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=789246036]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=883287243]
+shape = SubResource("SphereShape3D_1e8py")

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bdj8mwevhanmr"]
+
+[ext_resource type="Script" uid="uid://dxb84rgmg42f1" path="res://intro/label_3d.gd" id="1_gjrx4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uc2yk"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_d6fje"]
+sky_material = SubResource("ProceduralSkyMaterial_uc2yk")
+
+[sub_resource type="Environment" id="Environment_hr5jt"]
+background_mode = 2
+background_energy_multiplier = 0.2
+sky = SubResource("Sky_d6fje")
+
+[node name="Intro" type="Node3D" unique_id=907554744]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1718233161]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=324331870]
+environment = SubResource("Environment_hr5jt")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=742618485]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.0867035)
+fov = 30.0
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1232713981]
+transform = Transform3D(1, 0, 0, 0, 0.49347132, 0.86976206, 0, -0.86976206, 0.49347132, 0, -2.373247, -2.8849947)
+modulate = Color(0, 1, 0, 1)
+text = "
+Your wife just left you. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.
+
+During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.
+
+Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy...."
+autowrap_mode = 2
+width = 900.0
+script = ExtResource("1_gjrx4")

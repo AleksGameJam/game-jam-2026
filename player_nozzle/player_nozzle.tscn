@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://bk1ldkuglakh4"]
+
+[ext_resource type="Texture2D" uid="uid://dfygw4jkcynaf" path="res://player_nozzle/red-henry.jpg" id="1_gyoa3"]
+[ext_resource type="Script" uid="uid://diyrnree5qa6u" path="res://player_nozzle/player_nozzle.gd" id="1_nf8fl"]
+[ext_resource type="Script" uid="uid://c7bhwnr1tnrp5" path="res://player_nozzle/kill_area.gd" id="2_8gyx7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skrcp"]
+albedo_texture = ExtResource("1_gyoa3")
+uv1_scale = Vector3(1.8, 1.8, 1.8)
+uv1_offset = Vector3(-0.03, 0, -0.55)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 130.58263
+uv1_world_triplanar = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_1e8py"]
+material = SubResource("StandardMaterial3D_skrcp")
+size = Vector3(0.5, 0.5, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyoa3"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5m2fx"]
+material = SubResource("StandardMaterial3D_gyoa3")
+radius = 0.02
+height = 0.2
+radial_segments = 4
+rings = 2
+
+[sub_resource type="Curve" id="Curve_1e8py"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.38292015, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -0.047286235, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_gyoa3"]
+offsets = PackedFloat32Array(0, 0.6537217, 0.99676377)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1e8py"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.17254902)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5m2fx"]
+material = SubResource("StandardMaterial3D_1e8py")
+top_radius = 3.0
+bottom_radius = 0.0
+height = 3.0
+radial_segments = 8
+rings = 2
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nf8fl"]
+points = PackedVector3Array(0, 1.5, -3, 0, 0.49980426, -2.0003915, -2.1213782, 1.5, -2.1213782, 2.120791, 1.5, -2.1213782, 1.4136648, 0.49980426, -1.4142522, 0, -1.5, 0, -1.4142522, 0.49980426, -1.4142522, -2.0003915, 0.49980426, 0, -3, 1.5, 0, 3, 1.5, 0, -1.4142522, 0.49980426, 1.4136648, 2.120791, 1.5, 2.120791, 0, 1.5, 3, -2.1213782, 1.5, 2.120791)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1e8py"]
+size = Vector3(0.72875977, 0.31689453, 0.09567261)
+
+[node name="PlayerNozzle" type="Node3D" unique_id=830472487]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=204684545]
+transform = Transform3D(-4.371139e-08, 0, 1, 1, -4.371139e-08, 4.371139e-08, 4.371139e-08, 1, 1.9106855e-15, 0, 0, 0)
+mesh = SubResource("PrismMesh_1e8py")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=459193785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.30257088)
+amount = 16
+lifetime = 0.2
+mesh = SubResource("CapsuleMesh_5m2fx")
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 2.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 0.0
+particle_flag_align_y = true
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -50.0
+radial_accel_max = -50.0
+scale_amount_curve = SubResource("Curve_1e8py")
+color_ramp = SubResource("Gradient_gyoa3")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=260327744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+gravity_space_override = 1
+gravity_point = true
+gravity_point_center = Vector3(0, 0, 2)
+gravity_direction = Vector3(0, 0, 2)
+gravity = 200.0
+script = ExtResource("1_nf8fl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=1531094164]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0.7433605)
+visible = false
+mesh = SubResource("CylinderMesh_5m2fx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D" unique_id=621210066]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0.7433605)
+shape = SubResource("ConvexPolygonShape3D_nf8fl")
+
+[node name="KillArea" type="Area3D" parent="." unique_id=16346796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21749008)
+script = ExtResource("2_8gyx7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillArea" unique_id=847072228]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012329102, 0.0007324219, -0.31505364)
+shape = SubResource("BoxShape3D_1e8py")
+
+[connection signal="body_entered" from="KillArea" to="KillArea" method="_on_body_entered"]
