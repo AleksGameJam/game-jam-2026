@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cimeqauqhrtgo" path="res://enemies/room_with_enemies.gd" id="1_gvfet"]
 [ext_resource type="PackedScene" uid="uid://c8d220k74p1h4" path="res://enemies/DustBunny.tscn" id="2_ydiif"]
-[ext_resource type="PackedScene" uid="uid://bk1ldkuglakh4" path="res://player_nozzle/player_nozzle.tscn" id="3_hepi8"]
+[ext_resource type="PackedScene" uid="uid://c7wwk8ft0cy87" path="res://scenes/player.tscn" id="3_b83cu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gvfet"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -27,561 +27,563 @@ environment = SubResource("Environment_hepi8")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1342138702]
 use_collision = true
-size = Vector3(20, 8, 20)
+size = Vector3(60, 50, 60)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D" unique_id=1749376122]
 operation = 2
-size = Vector3(19, 7, 19)
+size = Vector3(55, 48, 55)
 material = SubResource("StandardMaterial3D_d6fje")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1561474145]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9913237, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -17.934616, 0)
 shadow_enabled = true
-omni_range = 15.0
+omni_range = 50.0
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1365698334]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.016304)
+[node name="Stuff" type="Node3D" parent="." unique_id=451969678]
 
-[node name="PlayerNozzle" parent="." unique_id=830472487 instance=ExtResource("3_hepi8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029970646, -1.2272996, 7.3737707)
+[node name="Camera3D" type="Camera3D" parent="Stuff" unique_id=1365698334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.261594, 20.29633)
 
-[node name="Enemies" type="Node3D" parent="." unique_id=1629445548]
+[node name="Enemies" type="Node3D" parent="Stuff" unique_id=1629445548]
 
-[node name="Bouncy" parent="Enemies" unique_id=1832415645 instance=ExtResource("2_ydiif")]
+[node name="Bouncy" parent="Stuff/Enemies" unique_id=1832415645 instance=ExtResource("2_ydiif")]
 
-[node name="Bouncy3" parent="Enemies" unique_id=797332052 instance=ExtResource("2_ydiif")]
+[node name="Bouncy3" parent="Stuff/Enemies" unique_id=797332052 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, 0)
 
-[node name="Bouncy4" parent="Enemies" unique_id=1934002514 instance=ExtResource("2_ydiif")]
+[node name="Bouncy4" parent="Stuff/Enemies" unique_id=1934002514 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, 1.050519)
 
-[node name="Bouncy5" parent="Enemies" unique_id=130768536 instance=ExtResource("2_ydiif")]
+[node name="Bouncy5" parent="Stuff/Enemies" unique_id=130768536 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12948918, 0, 1.050519)
 
-[node name="Bouncy2" parent="Enemies" unique_id=906617335 instance=ExtResource("2_ydiif")]
+[node name="Bouncy2" parent="Stuff/Enemies" unique_id=906617335 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71096206, 0)
 
-[node name="Bouncy6" parent="Enemies" unique_id=1066493104 instance=ExtResource("2_ydiif")]
+[node name="Bouncy6" parent="Stuff/Enemies" unique_id=1066493104 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0.71096206, 0)
 
-[node name="Bouncy7" parent="Enemies" unique_id=917981159 instance=ExtResource("2_ydiif")]
+[node name="Bouncy7" parent="Stuff/Enemies" unique_id=917981159 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0.71096206, 1.050519)
 
-[node name="Bouncy8" parent="Enemies" unique_id=334166872 instance=ExtResource("2_ydiif")]
+[node name="Bouncy8" parent="Stuff/Enemies" unique_id=334166872 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12948918, 0.71096206, 1.050519)
 
-[node name="Bouncy9" parent="Enemies" unique_id=1142969196 instance=ExtResource("2_ydiif")]
+[node name="Bouncy9" parent="Stuff/Enemies" unique_id=1142969196 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3612771, 0)
 
-[node name="Bouncy10" parent="Enemies" unique_id=71276959 instance=ExtResource("2_ydiif")]
+[node name="Bouncy10" parent="Stuff/Enemies" unique_id=71276959 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 1.3612771, 0)
 
-[node name="Bouncy11" parent="Enemies" unique_id=1498421159 instance=ExtResource("2_ydiif")]
+[node name="Bouncy11" parent="Stuff/Enemies" unique_id=1498421159 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 1.3612771, 1.050519)
 
-[node name="Bouncy12" parent="Enemies" unique_id=1401647892 instance=ExtResource("2_ydiif")]
+[node name="Bouncy12" parent="Stuff/Enemies" unique_id=1401647892 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12948918, 1.3612771, 1.050519)
 
-[node name="Bouncy13" parent="Enemies" unique_id=873908487 instance=ExtResource("2_ydiif")]
+[node name="Bouncy13" parent="Stuff/Enemies" unique_id=873908487 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0443344, 0, 0)
 
-[node name="Bouncy14" parent="Enemies" unique_id=448198995 instance=ExtResource("2_ydiif")]
+[node name="Bouncy14" parent="Stuff/Enemies" unique_id=448198995 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0, 0)
 
-[node name="Bouncy15" parent="Enemies" unique_id=1519902128 instance=ExtResource("2_ydiif")]
+[node name="Bouncy15" parent="Stuff/Enemies" unique_id=1519902128 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0, 1.050519)
 
-[node name="Bouncy16" parent="Enemies" unique_id=1468266276 instance=ExtResource("2_ydiif")]
+[node name="Bouncy16" parent="Stuff/Enemies" unique_id=1468266276 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9148452, 0, 1.050519)
 
-[node name="Bouncy17" parent="Enemies" unique_id=1264340449 instance=ExtResource("2_ydiif")]
+[node name="Bouncy17" parent="Stuff/Enemies" unique_id=1264340449 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0443344, 0.71096206, 0)
 
-[node name="Bouncy18" parent="Enemies" unique_id=66271189 instance=ExtResource("2_ydiif")]
+[node name="Bouncy18" parent="Stuff/Enemies" unique_id=66271189 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0.71096206, 0)
 
-[node name="Bouncy19" parent="Enemies" unique_id=445401130 instance=ExtResource("2_ydiif")]
+[node name="Bouncy19" parent="Stuff/Enemies" unique_id=445401130 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0.71096206, 1.050519)
 
-[node name="Bouncy20" parent="Enemies" unique_id=482230911 instance=ExtResource("2_ydiif")]
+[node name="Bouncy20" parent="Stuff/Enemies" unique_id=482230911 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9148452, 0.71096206, 1.050519)
 
-[node name="Bouncy21" parent="Enemies" unique_id=1346845547 instance=ExtResource("2_ydiif")]
+[node name="Bouncy21" parent="Stuff/Enemies" unique_id=1346845547 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0443344, 1.3612771, 0)
 
-[node name="Bouncy22" parent="Enemies" unique_id=226030080 instance=ExtResource("2_ydiif")]
+[node name="Bouncy22" parent="Stuff/Enemies" unique_id=226030080 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 1.3612771, 0)
 
-[node name="Bouncy23" parent="Enemies" unique_id=949536679 instance=ExtResource("2_ydiif")]
+[node name="Bouncy23" parent="Stuff/Enemies" unique_id=949536679 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 1.3612771, 1.050519)
 
-[node name="Bouncy24" parent="Enemies" unique_id=1570089664 instance=ExtResource("2_ydiif")]
+[node name="Bouncy24" parent="Stuff/Enemies" unique_id=1570089664 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9148452, 1.3612771, 1.050519)
 
-[node name="Bouncy25" parent="Enemies" unique_id=181161335 instance=ExtResource("2_ydiif")]
+[node name="Bouncy25" parent="Stuff/Enemies" unique_id=181161335 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8967047, 0.008329272, 0.0024523735)
 
-[node name="Bouncy26" parent="Enemies" unique_id=1100668671 instance=ExtResource("2_ydiif")]
+[node name="Bouncy26" parent="Stuff/Enemies" unique_id=1100668671 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.008329272, 0.0024523735)
 
-[node name="Bouncy27" parent="Enemies" unique_id=1394114857 instance=ExtResource("2_ydiif")]
+[node name="Bouncy27" parent="Stuff/Enemies" unique_id=1394114857 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.008329272, 1.0529714)
 
-[node name="Bouncy28" parent="Enemies" unique_id=1496460492 instance=ExtResource("2_ydiif")]
+[node name="Bouncy28" parent="Stuff/Enemies" unique_id=1496460492 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7672155, 0.008329272, 1.0529714)
 
-[node name="Bouncy29" parent="Enemies" unique_id=598622307 instance=ExtResource("2_ydiif")]
+[node name="Bouncy29" parent="Stuff/Enemies" unique_id=598622307 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8967047, 0.7192913, 0.0024523735)
 
-[node name="Bouncy30" parent="Enemies" unique_id=1415151650 instance=ExtResource("2_ydiif")]
+[node name="Bouncy30" parent="Stuff/Enemies" unique_id=1415151650 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.7192913, 0.0024523735)
 
-[node name="Bouncy31" parent="Enemies" unique_id=1711513765 instance=ExtResource("2_ydiif")]
+[node name="Bouncy31" parent="Stuff/Enemies" unique_id=1711513765 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.7192913, 1.0529714)
 
-[node name="Bouncy32" parent="Enemies" unique_id=443958607 instance=ExtResource("2_ydiif")]
+[node name="Bouncy32" parent="Stuff/Enemies" unique_id=443958607 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7672155, 0.7192913, 1.0529714)
 
-[node name="Bouncy33" parent="Enemies" unique_id=1068326579 instance=ExtResource("2_ydiif")]
+[node name="Bouncy33" parent="Stuff/Enemies" unique_id=1068326579 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8967047, 1.3696064, 0.0024523735)
 
-[node name="Bouncy34" parent="Enemies" unique_id=630881155 instance=ExtResource("2_ydiif")]
+[node name="Bouncy34" parent="Stuff/Enemies" unique_id=630881155 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 1.3696064, 0.0024523735)
 
-[node name="Bouncy35" parent="Enemies" unique_id=999608033 instance=ExtResource("2_ydiif")]
+[node name="Bouncy35" parent="Stuff/Enemies" unique_id=999608033 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 1.3696064, 1.0529714)
 
-[node name="Bouncy36" parent="Enemies" unique_id=2114717732 instance=ExtResource("2_ydiif")]
+[node name="Bouncy36" parent="Stuff/Enemies" unique_id=2114717732 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7672155, 1.3696064, 1.0529714)
 
-[node name="Bouncy37" parent="Enemies" unique_id=473424302 instance=ExtResource("2_ydiif")]
+[node name="Bouncy37" parent="Stuff/Enemies" unique_id=473424302 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.905386, 0.008329272, 0.0024523735)
 
-[node name="Bouncy38" parent="Enemies" unique_id=1375573067 instance=ExtResource("2_ydiif")]
+[node name="Bouncy38" parent="Stuff/Enemies" unique_id=1375573067 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.008329272, 0.0024523735)
 
-[node name="Bouncy39" parent="Enemies" unique_id=893284310 instance=ExtResource("2_ydiif")]
+[node name="Bouncy39" parent="Stuff/Enemies" unique_id=893284310 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.008329272, 1.0529714)
 
-[node name="Bouncy40" parent="Enemies" unique_id=146108225 instance=ExtResource("2_ydiif")]
+[node name="Bouncy40" parent="Stuff/Enemies" unique_id=146108225 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0348752, 0.008329272, 1.0529714)
 
-[node name="Bouncy41" parent="Enemies" unique_id=1918905967 instance=ExtResource("2_ydiif")]
+[node name="Bouncy41" parent="Stuff/Enemies" unique_id=1918905967 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.905386, 0.7192913, 0.0024523735)
 
-[node name="Bouncy42" parent="Enemies" unique_id=683758869 instance=ExtResource("2_ydiif")]
+[node name="Bouncy42" parent="Stuff/Enemies" unique_id=683758869 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.7192913, 0.0024523735)
 
-[node name="Bouncy43" parent="Enemies" unique_id=1658108191 instance=ExtResource("2_ydiif")]
+[node name="Bouncy43" parent="Stuff/Enemies" unique_id=1658108191 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.7192913, 1.0529714)
 
-[node name="Bouncy44" parent="Enemies" unique_id=777117458 instance=ExtResource("2_ydiif")]
+[node name="Bouncy44" parent="Stuff/Enemies" unique_id=777117458 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0348752, 0.7192913, 1.0529714)
 
-[node name="Bouncy45" parent="Enemies" unique_id=337986067 instance=ExtResource("2_ydiif")]
+[node name="Bouncy45" parent="Stuff/Enemies" unique_id=337986067 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.905386, 1.3696064, 0.0024523735)
 
-[node name="Bouncy46" parent="Enemies" unique_id=807848062 instance=ExtResource("2_ydiif")]
+[node name="Bouncy46" parent="Stuff/Enemies" unique_id=807848062 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 1.3696064, 0.0024523735)
 
-[node name="Bouncy47" parent="Enemies" unique_id=2018996675 instance=ExtResource("2_ydiif")]
+[node name="Bouncy47" parent="Stuff/Enemies" unique_id=2018996675 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 1.3696064, 1.0529714)
 
-[node name="Bouncy48" parent="Enemies" unique_id=630414694 instance=ExtResource("2_ydiif")]
+[node name="Bouncy48" parent="Stuff/Enemies" unique_id=630414694 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0348752, 1.3696064, 1.0529714)
 
-[node name="Bouncy49" parent="Enemies" unique_id=504038060 instance=ExtResource("2_ydiif")]
+[node name="Bouncy49" parent="Stuff/Enemies" unique_id=504038060 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0009375, 0.008329272, 0.0024523735)
 
-[node name="Bouncy50" parent="Enemies" unique_id=743049554 instance=ExtResource("2_ydiif")]
+[node name="Bouncy50" parent="Stuff/Enemies" unique_id=743049554 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.008329272, 0.0024523735)
 
-[node name="Bouncy51" parent="Enemies" unique_id=1849734294 instance=ExtResource("2_ydiif")]
+[node name="Bouncy51" parent="Stuff/Enemies" unique_id=1849734294 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.008329272, 1.0529714)
 
-[node name="Bouncy52" parent="Enemies" unique_id=1543079683 instance=ExtResource("2_ydiif")]
+[node name="Bouncy52" parent="Stuff/Enemies" unique_id=1543079683 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 0.008329272, 1.0529714)
 
-[node name="Bouncy53" parent="Enemies" unique_id=1499377422 instance=ExtResource("2_ydiif")]
+[node name="Bouncy53" parent="Stuff/Enemies" unique_id=1499377422 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0009375, 0.7192913, 0.0024523735)
 
-[node name="Bouncy54" parent="Enemies" unique_id=2147307448 instance=ExtResource("2_ydiif")]
+[node name="Bouncy54" parent="Stuff/Enemies" unique_id=2147307448 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.7192913, 0.0024523735)
 
-[node name="Bouncy55" parent="Enemies" unique_id=1692825394 instance=ExtResource("2_ydiif")]
+[node name="Bouncy55" parent="Stuff/Enemies" unique_id=1692825394 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.7192913, 1.0529714)
 
-[node name="Bouncy56" parent="Enemies" unique_id=1685464635 instance=ExtResource("2_ydiif")]
+[node name="Bouncy56" parent="Stuff/Enemies" unique_id=1685464635 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 0.7192913, 1.0529714)
 
-[node name="Bouncy57" parent="Enemies" unique_id=1458153437 instance=ExtResource("2_ydiif")]
+[node name="Bouncy57" parent="Stuff/Enemies" unique_id=1458153437 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0009375, 1.3696064, 0.0024523735)
 
-[node name="Bouncy58" parent="Enemies" unique_id=802899201 instance=ExtResource("2_ydiif")]
+[node name="Bouncy58" parent="Stuff/Enemies" unique_id=802899201 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 1.3696064, 0.0024523735)
 
-[node name="Bouncy59" parent="Enemies" unique_id=355125834 instance=ExtResource("2_ydiif")]
+[node name="Bouncy59" parent="Stuff/Enemies" unique_id=355125834 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 1.3696064, 1.0529714)
 
-[node name="Bouncy60" parent="Enemies" unique_id=869692921 instance=ExtResource("2_ydiif")]
+[node name="Bouncy60" parent="Stuff/Enemies" unique_id=869692921 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 1.3696064, 1.0529714)
 
-[node name="Bouncy61" parent="Enemies" unique_id=1264851051 instance=ExtResource("2_ydiif")]
+[node name="Bouncy61" parent="Stuff/Enemies" unique_id=1264851051 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1235538)
 
-[node name="Bouncy62" parent="Enemies" unique_id=862328804 instance=ExtResource("2_ydiif")]
+[node name="Bouncy62" parent="Stuff/Enemies" unique_id=862328804 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, 2.1235538)
 
-[node name="Bouncy63" parent="Enemies" unique_id=753589507 instance=ExtResource("2_ydiif")]
+[node name="Bouncy63" parent="Stuff/Enemies" unique_id=753589507 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, 3.1740727)
 
-[node name="Bouncy64" parent="Enemies" unique_id=1722740300 instance=ExtResource("2_ydiif")]
+[node name="Bouncy64" parent="Stuff/Enemies" unique_id=1722740300 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12948918, 0, 3.1740727)
 
-[node name="Bouncy65" parent="Enemies" unique_id=1259072881 instance=ExtResource("2_ydiif")]
+[node name="Bouncy65" parent="Stuff/Enemies" unique_id=1259072881 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71096206, 2.1235538)
 
-[node name="Bouncy66" parent="Enemies" unique_id=851988260 instance=ExtResource("2_ydiif")]
+[node name="Bouncy66" parent="Stuff/Enemies" unique_id=851988260 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0.71096206, 2.1235538)
 
-[node name="Bouncy67" parent="Enemies" unique_id=327858960 instance=ExtResource("2_ydiif")]
+[node name="Bouncy67" parent="Stuff/Enemies" unique_id=327858960 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0.71096206, 3.1740727)
 
-[node name="Bouncy68" parent="Enemies" unique_id=1877817952 instance=ExtResource("2_ydiif")]
+[node name="Bouncy68" parent="Stuff/Enemies" unique_id=1877817952 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12948918, 0.71096206, 3.1740727)
 
-[node name="Bouncy69" parent="Enemies" unique_id=370512061 instance=ExtResource("2_ydiif")]
+[node name="Bouncy69" parent="Stuff/Enemies" unique_id=370512061 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3612771, 2.1235538)
 
-[node name="Bouncy70" parent="Enemies" unique_id=780236935 instance=ExtResource("2_ydiif")]
+[node name="Bouncy70" parent="Stuff/Enemies" unique_id=780236935 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 1.3612771, 2.1235538)
 
-[node name="Bouncy71" parent="Enemies" unique_id=978793727 instance=ExtResource("2_ydiif")]
+[node name="Bouncy71" parent="Stuff/Enemies" unique_id=978793727 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 1.3612771, 3.1740727)
 
-[node name="Bouncy72" parent="Enemies" unique_id=1077361839 instance=ExtResource("2_ydiif")]
+[node name="Bouncy72" parent="Stuff/Enemies" unique_id=1077361839 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12948918, 1.3612771, 3.1740727)
 
-[node name="Bouncy73" parent="Enemies" unique_id=384093970 instance=ExtResource("2_ydiif")]
+[node name="Bouncy73" parent="Stuff/Enemies" unique_id=384093970 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0443344, 0, 2.1235538)
 
-[node name="Bouncy74" parent="Enemies" unique_id=334629652 instance=ExtResource("2_ydiif")]
+[node name="Bouncy74" parent="Stuff/Enemies" unique_id=334629652 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0, 2.1235538)
 
-[node name="Bouncy75" parent="Enemies" unique_id=2090337117 instance=ExtResource("2_ydiif")]
+[node name="Bouncy75" parent="Stuff/Enemies" unique_id=2090337117 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0, 3.1740727)
 
-[node name="Bouncy76" parent="Enemies" unique_id=378713430 instance=ExtResource("2_ydiif")]
+[node name="Bouncy76" parent="Stuff/Enemies" unique_id=378713430 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9148452, 0, 3.1740727)
 
-[node name="Bouncy77" parent="Enemies" unique_id=701518313 instance=ExtResource("2_ydiif")]
+[node name="Bouncy77" parent="Stuff/Enemies" unique_id=701518313 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0443344, 0.71096206, 2.1235538)
 
-[node name="Bouncy78" parent="Enemies" unique_id=1480575210 instance=ExtResource("2_ydiif")]
+[node name="Bouncy78" parent="Stuff/Enemies" unique_id=1480575210 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0.71096206, 2.1235538)
 
-[node name="Bouncy79" parent="Enemies" unique_id=1808288662 instance=ExtResource("2_ydiif")]
+[node name="Bouncy79" parent="Stuff/Enemies" unique_id=1808288662 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0.71096206, 3.1740727)
 
-[node name="Bouncy80" parent="Enemies" unique_id=1297039810 instance=ExtResource("2_ydiif")]
+[node name="Bouncy80" parent="Stuff/Enemies" unique_id=1297039810 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9148452, 0.71096206, 3.1740727)
 
-[node name="Bouncy81" parent="Enemies" unique_id=1445828512 instance=ExtResource("2_ydiif")]
+[node name="Bouncy81" parent="Stuff/Enemies" unique_id=1445828512 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0443344, 1.3612771, 2.1235538)
 
-[node name="Bouncy82" parent="Enemies" unique_id=1419324136 instance=ExtResource("2_ydiif")]
+[node name="Bouncy82" parent="Stuff/Enemies" unique_id=1419324136 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 1.3612771, 2.1235538)
 
-[node name="Bouncy83" parent="Enemies" unique_id=2104076559 instance=ExtResource("2_ydiif")]
+[node name="Bouncy83" parent="Stuff/Enemies" unique_id=2104076559 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 1.3612771, 3.1740727)
 
-[node name="Bouncy84" parent="Enemies" unique_id=1749147337 instance=ExtResource("2_ydiif")]
+[node name="Bouncy84" parent="Stuff/Enemies" unique_id=1749147337 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9148452, 1.3612771, 3.1740727)
 
-[node name="Bouncy85" parent="Enemies" unique_id=335044384 instance=ExtResource("2_ydiif")]
+[node name="Bouncy85" parent="Stuff/Enemies" unique_id=335044384 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8967047, 0.008329272, 2.1260061)
 
-[node name="Bouncy86" parent="Enemies" unique_id=1111738830 instance=ExtResource("2_ydiif")]
+[node name="Bouncy86" parent="Stuff/Enemies" unique_id=1111738830 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.008329272, 2.1260061)
 
-[node name="Bouncy87" parent="Enemies" unique_id=2135250930 instance=ExtResource("2_ydiif")]
+[node name="Bouncy87" parent="Stuff/Enemies" unique_id=2135250930 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.008329272, 3.176525)
 
-[node name="Bouncy88" parent="Enemies" unique_id=1053934242 instance=ExtResource("2_ydiif")]
+[node name="Bouncy88" parent="Stuff/Enemies" unique_id=1053934242 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7672155, 0.008329272, 3.176525)
 
-[node name="Bouncy89" parent="Enemies" unique_id=1253407985 instance=ExtResource("2_ydiif")]
+[node name="Bouncy89" parent="Stuff/Enemies" unique_id=1253407985 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8967047, 0.7192913, 2.1260061)
 
-[node name="Bouncy90" parent="Enemies" unique_id=220731620 instance=ExtResource("2_ydiif")]
+[node name="Bouncy90" parent="Stuff/Enemies" unique_id=220731620 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.7192913, 2.1260061)
 
-[node name="Bouncy91" parent="Enemies" unique_id=1050224735 instance=ExtResource("2_ydiif")]
+[node name="Bouncy91" parent="Stuff/Enemies" unique_id=1050224735 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.7192913, 3.176525)
 
-[node name="Bouncy92" parent="Enemies" unique_id=1506291236 instance=ExtResource("2_ydiif")]
+[node name="Bouncy92" parent="Stuff/Enemies" unique_id=1506291236 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7672155, 0.7192913, 3.176525)
 
-[node name="Bouncy93" parent="Enemies" unique_id=1502361555 instance=ExtResource("2_ydiif")]
+[node name="Bouncy93" parent="Stuff/Enemies" unique_id=1502361555 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8967047, 1.3696064, 2.1260061)
 
-[node name="Bouncy94" parent="Enemies" unique_id=777196792 instance=ExtResource("2_ydiif")]
+[node name="Bouncy94" parent="Stuff/Enemies" unique_id=777196792 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 1.3696064, 2.1260061)
 
-[node name="Bouncy95" parent="Enemies" unique_id=1746563901 instance=ExtResource("2_ydiif")]
+[node name="Bouncy95" parent="Stuff/Enemies" unique_id=1746563901 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 1.3696064, 3.176525)
 
-[node name="Bouncy96" parent="Enemies" unique_id=905322225 instance=ExtResource("2_ydiif")]
+[node name="Bouncy96" parent="Stuff/Enemies" unique_id=905322225 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7672155, 1.3696064, 3.176525)
 
-[node name="Bouncy97" parent="Enemies" unique_id=1772195528 instance=ExtResource("2_ydiif")]
+[node name="Bouncy97" parent="Stuff/Enemies" unique_id=1772195528 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.905386, 0.008329272, 2.1260061)
 
-[node name="Bouncy98" parent="Enemies" unique_id=1791059681 instance=ExtResource("2_ydiif")]
+[node name="Bouncy98" parent="Stuff/Enemies" unique_id=1791059681 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.008329272, 2.1260061)
 
-[node name="Bouncy99" parent="Enemies" unique_id=1045885827 instance=ExtResource("2_ydiif")]
+[node name="Bouncy99" parent="Stuff/Enemies" unique_id=1045885827 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.008329272, 3.176525)
 
-[node name="Bouncy100" parent="Enemies" unique_id=1466269067 instance=ExtResource("2_ydiif")]
+[node name="Bouncy100" parent="Stuff/Enemies" unique_id=1466269067 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0348752, 0.008329272, 3.176525)
 
-[node name="Bouncy101" parent="Enemies" unique_id=1630078812 instance=ExtResource("2_ydiif")]
+[node name="Bouncy101" parent="Stuff/Enemies" unique_id=1630078812 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.905386, 0.7192913, 2.1260061)
 
-[node name="Bouncy102" parent="Enemies" unique_id=808947676 instance=ExtResource("2_ydiif")]
+[node name="Bouncy102" parent="Stuff/Enemies" unique_id=808947676 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.7192913, 2.1260061)
 
-[node name="Bouncy103" parent="Enemies" unique_id=1358146628 instance=ExtResource("2_ydiif")]
+[node name="Bouncy103" parent="Stuff/Enemies" unique_id=1358146628 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.7192913, 3.176525)
 
-[node name="Bouncy104" parent="Enemies" unique_id=1882410269 instance=ExtResource("2_ydiif")]
+[node name="Bouncy104" parent="Stuff/Enemies" unique_id=1882410269 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0348752, 0.7192913, 3.176525)
 
-[node name="Bouncy105" parent="Enemies" unique_id=1486059078 instance=ExtResource("2_ydiif")]
+[node name="Bouncy105" parent="Stuff/Enemies" unique_id=1486059078 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.905386, 1.3696064, 2.1260061)
 
-[node name="Bouncy106" parent="Enemies" unique_id=1249329042 instance=ExtResource("2_ydiif")]
+[node name="Bouncy106" parent="Stuff/Enemies" unique_id=1249329042 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 1.3696064, 2.1260061)
 
-[node name="Bouncy107" parent="Enemies" unique_id=74426198 instance=ExtResource("2_ydiif")]
+[node name="Bouncy107" parent="Stuff/Enemies" unique_id=74426198 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 1.3696064, 3.176525)
 
-[node name="Bouncy108" parent="Enemies" unique_id=843731512 instance=ExtResource("2_ydiif")]
+[node name="Bouncy108" parent="Stuff/Enemies" unique_id=843731512 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0348752, 1.3696064, 3.176525)
 
-[node name="Bouncy109" parent="Enemies" unique_id=1631967123 instance=ExtResource("2_ydiif")]
+[node name="Bouncy109" parent="Stuff/Enemies" unique_id=1631967123 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0009375, 0.008329272, 2.1260061)
 
-[node name="Bouncy110" parent="Enemies" unique_id=1562798470 instance=ExtResource("2_ydiif")]
+[node name="Bouncy110" parent="Stuff/Enemies" unique_id=1562798470 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.008329272, 2.1260061)
 
-[node name="Bouncy111" parent="Enemies" unique_id=577880610 instance=ExtResource("2_ydiif")]
+[node name="Bouncy111" parent="Stuff/Enemies" unique_id=577880610 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.008329272, 3.176525)
 
-[node name="Bouncy112" parent="Enemies" unique_id=1417825572 instance=ExtResource("2_ydiif")]
+[node name="Bouncy112" parent="Stuff/Enemies" unique_id=1417825572 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 0.008329272, 3.176525)
 
-[node name="Bouncy113" parent="Enemies" unique_id=1725489863 instance=ExtResource("2_ydiif")]
+[node name="Bouncy113" parent="Stuff/Enemies" unique_id=1725489863 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0009375, 0.7192913, 2.1260061)
 
-[node name="Bouncy114" parent="Enemies" unique_id=1884696255 instance=ExtResource("2_ydiif")]
+[node name="Bouncy114" parent="Stuff/Enemies" unique_id=1884696255 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.7192913, 2.1260061)
 
-[node name="Bouncy115" parent="Enemies" unique_id=1398823389 instance=ExtResource("2_ydiif")]
+[node name="Bouncy115" parent="Stuff/Enemies" unique_id=1398823389 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.7192913, 3.176525)
 
-[node name="Bouncy116" parent="Enemies" unique_id=1275385735 instance=ExtResource("2_ydiif")]
+[node name="Bouncy116" parent="Stuff/Enemies" unique_id=1275385735 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 0.7192913, 3.176525)
 
-[node name="Bouncy117" parent="Enemies" unique_id=1880305673 instance=ExtResource("2_ydiif")]
+[node name="Bouncy117" parent="Stuff/Enemies" unique_id=1880305673 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0009375, 1.3696064, 2.1260061)
 
-[node name="Bouncy118" parent="Enemies" unique_id=635444804 instance=ExtResource("2_ydiif")]
+[node name="Bouncy118" parent="Stuff/Enemies" unique_id=635444804 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 1.3696064, 2.1260061)
 
-[node name="Bouncy119" parent="Enemies" unique_id=415195527 instance=ExtResource("2_ydiif")]
+[node name="Bouncy119" parent="Stuff/Enemies" unique_id=415195527 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 1.3696064, 3.176525)
 
-[node name="Bouncy120" parent="Enemies" unique_id=1248171474 instance=ExtResource("2_ydiif")]
+[node name="Bouncy120" parent="Stuff/Enemies" unique_id=1248171474 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 1.3696064, 3.176525)
 
-[node name="Bouncy121" parent="Enemies" unique_id=496955322 instance=ExtResource("2_ydiif")]
+[node name="Bouncy121" parent="Stuff/Enemies" unique_id=496955322 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.1432343)
 
-[node name="Bouncy122" parent="Enemies" unique_id=548973485 instance=ExtResource("2_ydiif")]
+[node name="Bouncy122" parent="Stuff/Enemies" unique_id=548973485 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, -2.1432343)
 
-[node name="Bouncy123" parent="Enemies" unique_id=323544526 instance=ExtResource("2_ydiif")]
+[node name="Bouncy123" parent="Stuff/Enemies" unique_id=323544526 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, -1.0927153)
 
-[node name="Bouncy124" parent="Enemies" unique_id=1309613781 instance=ExtResource("2_ydiif")]
+[node name="Bouncy124" parent="Stuff/Enemies" unique_id=1309613781 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12948918, 0, -1.0927153)
 
-[node name="Bouncy125" parent="Enemies" unique_id=1593485846 instance=ExtResource("2_ydiif")]
+[node name="Bouncy125" parent="Stuff/Enemies" unique_id=1593485846 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71096206, -2.1432343)
 
-[node name="Bouncy126" parent="Enemies" unique_id=773837380 instance=ExtResource("2_ydiif")]
+[node name="Bouncy126" parent="Stuff/Enemies" unique_id=773837380 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0.71096206, -2.1432343)
 
-[node name="Bouncy127" parent="Enemies" unique_id=2065011082 instance=ExtResource("2_ydiif")]
+[node name="Bouncy127" parent="Stuff/Enemies" unique_id=2065011082 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0.71096206, -1.0927153)
 
-[node name="Bouncy128" parent="Enemies" unique_id=187973742 instance=ExtResource("2_ydiif")]
+[node name="Bouncy128" parent="Stuff/Enemies" unique_id=187973742 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12948918, 0.71096206, -1.0927153)
 
-[node name="Bouncy129" parent="Enemies" unique_id=2095481621 instance=ExtResource("2_ydiif")]
+[node name="Bouncy129" parent="Stuff/Enemies" unique_id=2095481621 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3612771, -2.1432343)
 
-[node name="Bouncy130" parent="Enemies" unique_id=1439888409 instance=ExtResource("2_ydiif")]
+[node name="Bouncy130" parent="Stuff/Enemies" unique_id=1439888409 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 1.3612771, -2.1432343)
 
-[node name="Bouncy131" parent="Enemies" unique_id=1351070006 instance=ExtResource("2_ydiif")]
+[node name="Bouncy131" parent="Stuff/Enemies" unique_id=1351070006 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 1.3612771, -1.0927153)
 
-[node name="Bouncy132" parent="Enemies" unique_id=1426701814 instance=ExtResource("2_ydiif")]
+[node name="Bouncy132" parent="Stuff/Enemies" unique_id=1426701814 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12948918, 1.3612771, -1.0927153)
 
-[node name="Bouncy133" parent="Enemies" unique_id=473202064 instance=ExtResource("2_ydiif")]
+[node name="Bouncy133" parent="Stuff/Enemies" unique_id=473202064 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0443344, 0, -2.1432343)
 
-[node name="Bouncy134" parent="Enemies" unique_id=1970413093 instance=ExtResource("2_ydiif")]
+[node name="Bouncy134" parent="Stuff/Enemies" unique_id=1970413093 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0, -2.1432343)
 
-[node name="Bouncy135" parent="Enemies" unique_id=898233598 instance=ExtResource("2_ydiif")]
+[node name="Bouncy135" parent="Stuff/Enemies" unique_id=898233598 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0, -1.0927153)
 
-[node name="Bouncy136" parent="Enemies" unique_id=1735001237 instance=ExtResource("2_ydiif")]
+[node name="Bouncy136" parent="Stuff/Enemies" unique_id=1735001237 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9148452, 0, -1.0927153)
 
-[node name="Bouncy137" parent="Enemies" unique_id=2001182428 instance=ExtResource("2_ydiif")]
+[node name="Bouncy137" parent="Stuff/Enemies" unique_id=2001182428 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0443344, 0.71096206, -2.1432343)
 
-[node name="Bouncy138" parent="Enemies" unique_id=652105277 instance=ExtResource("2_ydiif")]
+[node name="Bouncy138" parent="Stuff/Enemies" unique_id=652105277 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0.71096206, -2.1432343)
 
-[node name="Bouncy139" parent="Enemies" unique_id=700770571 instance=ExtResource("2_ydiif")]
+[node name="Bouncy139" parent="Stuff/Enemies" unique_id=700770571 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 0.71096206, -1.0927153)
 
-[node name="Bouncy140" parent="Enemies" unique_id=506762098 instance=ExtResource("2_ydiif")]
+[node name="Bouncy140" parent="Stuff/Enemies" unique_id=506762098 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9148452, 0.71096206, -1.0927153)
 
-[node name="Bouncy141" parent="Enemies" unique_id=101807039 instance=ExtResource("2_ydiif")]
+[node name="Bouncy141" parent="Stuff/Enemies" unique_id=101807039 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0443344, 1.3612771, -2.1432343)
 
-[node name="Bouncy142" parent="Enemies" unique_id=551951438 instance=ExtResource("2_ydiif")]
+[node name="Bouncy142" parent="Stuff/Enemies" unique_id=551951438 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 1.3612771, -2.1432343)
 
-[node name="Bouncy143" parent="Enemies" unique_id=2144592019 instance=ExtResource("2_ydiif")]
+[node name="Bouncy143" parent="Stuff/Enemies" unique_id=2144592019 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0414436, 1.3612771, -1.0927153)
 
-[node name="Bouncy144" parent="Enemies" unique_id=1438977426 instance=ExtResource("2_ydiif")]
+[node name="Bouncy144" parent="Stuff/Enemies" unique_id=1438977426 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9148452, 1.3612771, -1.0927153)
 
-[node name="Bouncy145" parent="Enemies" unique_id=2130252973 instance=ExtResource("2_ydiif")]
+[node name="Bouncy145" parent="Stuff/Enemies" unique_id=2130252973 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8967047, 0.008329272, -2.1407819)
 
-[node name="Bouncy146" parent="Enemies" unique_id=1787038320 instance=ExtResource("2_ydiif")]
+[node name="Bouncy146" parent="Stuff/Enemies" unique_id=1787038320 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.008329272, -2.1407819)
 
-[node name="Bouncy147" parent="Enemies" unique_id=1651228441 instance=ExtResource("2_ydiif")]
+[node name="Bouncy147" parent="Stuff/Enemies" unique_id=1651228441 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.008329272, -1.0902629)
 
-[node name="Bouncy148" parent="Enemies" unique_id=616669910 instance=ExtResource("2_ydiif")]
+[node name="Bouncy148" parent="Stuff/Enemies" unique_id=616669910 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7672155, 0.008329272, -1.0902629)
 
-[node name="Bouncy149" parent="Enemies" unique_id=1760474778 instance=ExtResource("2_ydiif")]
+[node name="Bouncy149" parent="Stuff/Enemies" unique_id=1760474778 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8967047, 0.7192913, -2.1407819)
 
-[node name="Bouncy150" parent="Enemies" unique_id=69152113 instance=ExtResource("2_ydiif")]
+[node name="Bouncy150" parent="Stuff/Enemies" unique_id=69152113 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.7192913, -2.1407819)
 
-[node name="Bouncy151" parent="Enemies" unique_id=543946085 instance=ExtResource("2_ydiif")]
+[node name="Bouncy151" parent="Stuff/Enemies" unique_id=543946085 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 0.7192913, -1.0902629)
 
-[node name="Bouncy152" parent="Enemies" unique_id=1982219621 instance=ExtResource("2_ydiif")]
+[node name="Bouncy152" parent="Stuff/Enemies" unique_id=1982219621 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7672155, 0.7192913, -1.0902629)
 
-[node name="Bouncy153" parent="Enemies" unique_id=188687349 instance=ExtResource("2_ydiif")]
+[node name="Bouncy153" parent="Stuff/Enemies" unique_id=188687349 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8967047, 1.3696064, -2.1407819)
 
-[node name="Bouncy154" parent="Enemies" unique_id=117191644 instance=ExtResource("2_ydiif")]
+[node name="Bouncy154" parent="Stuff/Enemies" unique_id=117191644 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 1.3696064, -2.1407819)
 
-[node name="Bouncy155" parent="Enemies" unique_id=2039949687 instance=ExtResource("2_ydiif")]
+[node name="Bouncy155" parent="Stuff/Enemies" unique_id=2039949687 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8938136, 1.3696064, -1.0902629)
 
-[node name="Bouncy156" parent="Enemies" unique_id=248176947 instance=ExtResource("2_ydiif")]
+[node name="Bouncy156" parent="Stuff/Enemies" unique_id=248176947 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7672155, 1.3696064, -1.0902629)
 
-[node name="Bouncy157" parent="Enemies" unique_id=733179402 instance=ExtResource("2_ydiif")]
+[node name="Bouncy157" parent="Stuff/Enemies" unique_id=733179402 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.905386, 0.008329272, -2.1407819)
 
-[node name="Bouncy158" parent="Enemies" unique_id=85784787 instance=ExtResource("2_ydiif")]
+[node name="Bouncy158" parent="Stuff/Enemies" unique_id=85784787 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.008329272, -2.1407819)
 
-[node name="Bouncy159" parent="Enemies" unique_id=1561572389 instance=ExtResource("2_ydiif")]
+[node name="Bouncy159" parent="Stuff/Enemies" unique_id=1561572389 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.008329272, -1.0902629)
 
-[node name="Bouncy160" parent="Enemies" unique_id=1621744687 instance=ExtResource("2_ydiif")]
+[node name="Bouncy160" parent="Stuff/Enemies" unique_id=1621744687 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0348752, 0.008329272, -1.0902629)
 
-[node name="Bouncy161" parent="Enemies" unique_id=776767164 instance=ExtResource("2_ydiif")]
+[node name="Bouncy161" parent="Stuff/Enemies" unique_id=776767164 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.905386, 0.7192913, -2.1407819)
 
-[node name="Bouncy162" parent="Enemies" unique_id=69874940 instance=ExtResource("2_ydiif")]
+[node name="Bouncy162" parent="Stuff/Enemies" unique_id=69874940 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.7192913, -2.1407819)
 
-[node name="Bouncy163" parent="Enemies" unique_id=1563649911 instance=ExtResource("2_ydiif")]
+[node name="Bouncy163" parent="Stuff/Enemies" unique_id=1563649911 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 0.7192913, -1.0902629)
 
-[node name="Bouncy164" parent="Enemies" unique_id=1172547262 instance=ExtResource("2_ydiif")]
+[node name="Bouncy164" parent="Stuff/Enemies" unique_id=1172547262 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0348752, 0.7192913, -1.0902629)
 
-[node name="Bouncy165" parent="Enemies" unique_id=1413241690 instance=ExtResource("2_ydiif")]
+[node name="Bouncy165" parent="Stuff/Enemies" unique_id=1413241690 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.905386, 1.3696064, -2.1407819)
 
-[node name="Bouncy166" parent="Enemies" unique_id=1844606171 instance=ExtResource("2_ydiif")]
+[node name="Bouncy166" parent="Stuff/Enemies" unique_id=1844606171 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 1.3696064, -2.1407819)
 
-[node name="Bouncy167" parent="Enemies" unique_id=1339923625 instance=ExtResource("2_ydiif")]
+[node name="Bouncy167" parent="Stuff/Enemies" unique_id=1339923625 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90827703, 1.3696064, -1.0902629)
 
-[node name="Bouncy168" parent="Enemies" unique_id=2071225831 instance=ExtResource("2_ydiif")]
+[node name="Bouncy168" parent="Stuff/Enemies" unique_id=2071225831 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0348752, 1.3696064, -1.0902629)
 
-[node name="Bouncy169" parent="Enemies" unique_id=484033512 instance=ExtResource("2_ydiif")]
+[node name="Bouncy169" parent="Stuff/Enemies" unique_id=484033512 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0009375, 0.008329272, -2.1407819)
 
-[node name="Bouncy170" parent="Enemies" unique_id=769966030 instance=ExtResource("2_ydiif")]
+[node name="Bouncy170" parent="Stuff/Enemies" unique_id=769966030 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.008329272, -2.1407819)
 
-[node name="Bouncy171" parent="Enemies" unique_id=1365546304 instance=ExtResource("2_ydiif")]
+[node name="Bouncy171" parent="Stuff/Enemies" unique_id=1365546304 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.008329272, -1.0902629)
 
-[node name="Bouncy172" parent="Enemies" unique_id=1591393907 instance=ExtResource("2_ydiif")]
+[node name="Bouncy172" parent="Stuff/Enemies" unique_id=1591393907 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 0.008329272, -1.0902629)
 
-[node name="Bouncy173" parent="Enemies" unique_id=119345402 instance=ExtResource("2_ydiif")]
+[node name="Bouncy173" parent="Stuff/Enemies" unique_id=119345402 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0009375, 0.7192913, -2.1407819)
 
-[node name="Bouncy174" parent="Enemies" unique_id=618796990 instance=ExtResource("2_ydiif")]
+[node name="Bouncy174" parent="Stuff/Enemies" unique_id=618796990 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.7192913, -2.1407819)
 
-[node name="Bouncy175" parent="Enemies" unique_id=2092933747 instance=ExtResource("2_ydiif")]
+[node name="Bouncy175" parent="Stuff/Enemies" unique_id=2092933747 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 0.7192913, -1.0902629)
 
-[node name="Bouncy176" parent="Enemies" unique_id=1348020167 instance=ExtResource("2_ydiif")]
+[node name="Bouncy176" parent="Stuff/Enemies" unique_id=1348020167 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 0.7192913, -1.0902629)
 
-[node name="Bouncy177" parent="Enemies" unique_id=361740437 instance=ExtResource("2_ydiif")]
+[node name="Bouncy177" parent="Stuff/Enemies" unique_id=361740437 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0009375, 1.3696064, -2.1407819)
 
-[node name="Bouncy178" parent="Enemies" unique_id=845523752 instance=ExtResource("2_ydiif")]
+[node name="Bouncy178" parent="Stuff/Enemies" unique_id=845523752 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 1.3696064, -2.1407819)
 
-[node name="Bouncy179" parent="Enemies" unique_id=1413207347 instance=ExtResource("2_ydiif")]
+[node name="Bouncy179" parent="Stuff/Enemies" unique_id=1413207347 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 1.3696064, -1.0902629)
 
-[node name="Bouncy180" parent="Enemies" unique_id=2100899720 instance=ExtResource("2_ydiif")]
+[node name="Bouncy180" parent="Stuff/Enemies" unique_id=2100899720 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 1.3696064, -1.0902629)
+
+[node name="da snabel zone" parent="Stuff" unique_id=2057323852 instance=ExtResource("3_b83cu")]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -22.26793, 4.901871)
