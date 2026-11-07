@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bjgkfmp86lhik"]
+
+[ext_resource type="PackedScene" uid="uid://c7wwk8ft0cy87" path="res://player.tscn" id="1_t6l7b"]
+[ext_resource type="Script" uid="uid://qjqmryfbkesl" path="res://camera_script.gd" id="4_0pbor"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h3dn6"]
+size = Vector3(200, 1, 200)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h3dn6"]
+
+[node name="Node3D" type="Node3D" unique_id=1413007745]
+
+[node name="da snabel zone" parent="." unique_id=2057323852 instance=ExtResource("1_t6l7b")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2034095861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=71732063]
+shape = SubResource("BoxShape3D_h3dn6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=283126716]
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, 0, 0)
+mesh = SubResource("BoxMesh_h3dn6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=712205556]
+transform = Transform3D(-4.371139e-08, -7.450581e-09, 1, 0, 1, 7.450581e-09, -1, 3.2567522e-16, -4.371139e-08, 9.635287, 22.261364, 7.118292)
+light_energy = 16.0
+omni_range = 4096.0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=635915453]
+transform = Transform3D(1, 0, 0, 0, 0.9563048, 0.2923717, 0, -0.2923717, 0.9563048, 0, 12, 18)
+script = ExtResource("4_0pbor")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1142373089]

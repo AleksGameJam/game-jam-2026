@@ -1,0 +1,293 @@
+[gd_scene format=3 uid="uid://c7wwk8ft0cy87"]
+
+[ext_resource type="Script" uid="uid://pngveqef2xmj" path="res://da_snabel_zone.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://c8vceksa55mls" path="res://flipflopscript.gd" id="2_hqtel"]
+[ext_resource type="Script" uid="uid://cfeormrikpgvv" path="res://movescript.gd" id="3_sweqy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dp7al"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a6aca"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dp7al"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_47vuo"]
+
+[node name="da snabel zone" type="RigidBody3D" unique_id=2057323852]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+script = ExtResource("1_i3pqv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=678819758]
+transform = Transform3D(1, 0, 0, 7.450581e-09, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=898554336]
+transform = Transform3D(1, 0, 0, 7.450581e-09, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_a6aca")
+
+[node name="ConeTwistJoint3D" type="ConeTwistJoint3D" parent="." unique_id=1925346946]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 0.50000006, 0)
+node_a = NodePath("..")
+node_b = NodePath("../RigidBody3D")
+exclude_nodes_from_collision = false
+twist_span = 4.712389
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1205051440]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 1.5070826, 0)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+script = ExtResource("2_hqtel")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1885840720]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1314957066]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="ConeTwistJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D" unique_id=1492472473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D2")
+exclude_nodes_from_collision = false
+swing_span = 0.0
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=1620950329]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 3.307083, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2" unique_id=768151564]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2" unique_id=2077449721]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D2" unique_id=1710123646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D3")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="." unique_id=1360901744]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 5.107083, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D3" unique_id=487798522]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D3" unique_id=940118774]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D3" unique_id=1214130887]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D4")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="." unique_id=189693018]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 6.9070835, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D4" unique_id=997557428]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D4" unique_id=137455245]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D4" unique_id=109483648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D5")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D5" type="RigidBody3D" parent="." unique_id=1514127660]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 8.707084, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5" unique_id=1044286166]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D5" unique_id=415049118]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D5" unique_id=1837820048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D6")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D6" type="RigidBody3D" parent="." unique_id=2128512173]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 10.507083, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D6" unique_id=1929533079]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D6" unique_id=1498291436]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D6" unique_id=49452372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D7")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D7" type="RigidBody3D" parent="." unique_id=283668078]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 12.307083, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D7" unique_id=2098005931]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D7" unique_id=476973496]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D7" unique_id=267386461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D8")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D8" type="RigidBody3D" parent="." unique_id=1849929235]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 14.107083, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D8" unique_id=169916530]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D8" unique_id=1140934046]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D8" unique_id=397791213]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D9")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D9" type="RigidBody3D" parent="." unique_id=1216813995]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 15.9070835, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D9" unique_id=63595445]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D9" unique_id=1106119089]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D9" unique_id=1711299321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D10")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D10" type="RigidBody3D" parent="." unique_id=488491782]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 17.70708, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D10" unique_id=1317565128]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D10" unique_id=526120538]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D10" unique_id=80717902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D11")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D11" type="RigidBody3D" parent="." unique_id=1889079113]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 19.507084, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D11" unique_id=1861077608]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D11" unique_id=156356715]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D11" unique_id=607626659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../RigidBody3D12")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="RigidBody3D12" type="RigidBody3D" parent="." unique_id=248466977]
+transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 21.307085, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D12" unique_id=1117973475]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D12" unique_id=1153817816]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="RigidBody3D12" unique_id=172724701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../da handle")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="da handle" type="RigidBody3D" parent="." unique_id=134841865]
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 23.159098, 0)
+script = ExtResource("3_sweqy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="da handle" unique_id=191320158]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="da handle" unique_id=1161959825]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="da handle" unique_id=2028035364]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../da snoot")
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 4.712389
+bias = 0.05
+
+[node name="da snoot" type="RigidBody3D" parent="." unique_id=63068322]
+transform = Transform3D(1, 0, 0, 1.49011585e-08, 0.9999998, 0, 0, 0, 0.9999998, 0, 24.959097, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="da snoot" unique_id=1590293996]
+shape = SubResource("CapsuleShape3D_dp7al")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="da snoot" unique_id=730935758]
+mesh = SubResource("CapsuleMesh_47vuo")
+
+[node name="Generic6DOFJoint3D" type="ConeTwistJoint3D" parent="da snoot" unique_id=1888100888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+exclude_nodes_from_collision = false
+swing_span = 0.2617994
+twist_span = 0.5846853
+bias = 0.05
