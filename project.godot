@@ -38,6 +38,7 @@ rotate_right={
 [layer_names]
 
 3d_physics/layer_4="enemies"
+3d_physics/layer_9="eyes"
 
 [physics]
 

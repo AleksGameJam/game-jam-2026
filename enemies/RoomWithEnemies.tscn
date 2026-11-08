@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c8d220k74p1h4" path="res://enemies/DustBunny.tscn" id="2_ydiif"]
 [ext_resource type="PackedScene" uid="uid://mjhmfuxjws3f" path="res://enemies/beer_can.tscn" id="3_8iyv3"]
 [ext_resource type="PackedScene" uid="uid://c7wwk8ft0cy87" path="res://scenes/player.tscn" id="3_b83cu"]
-[ext_resource type="AudioStream" uid="uid://bfrrntmm45bb5" path="res://music/May the dust.wav" id="5_ev655"]
+[ext_resource type="PackedScene" uid="uid://bdj8mwevhanmr" path="res://intro/Intro.tscn" id="5_ev655"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gvfet"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -612,4 +612,5 @@ transform = Transform3D(-2.185569e-08, -0.20804143, -0.97811997, 0.99999994, 3.2
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -22.26793, 4.901871)
 
 [node name="MayTheDust" type="AudioStreamPlayer" parent="." unique_id=323260580]
-stream = ExtResource("5_ev655")
+
+[node name="Intro" parent="." unique_id=907554744 instance=ExtResource("5_ev655")]

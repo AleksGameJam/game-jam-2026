@@ -39,6 +39,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3360119, -0.039577752, -0.9
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Is" unique_id=82047390]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29599655, 0, 0)
+collision_layer = 256
+collision_mask = 256
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Is/StaticBody3D" unique_id=959044806]
 transform = Transform3D(1.0000002, 0, 0, 0, -4.371139e-08, -1.0000001, 0, 1, -4.3711392e-08, 0.05492966, -0.0053710938, 0)
@@ -46,6 +48,8 @@ shape = SubResource("BoxShape3D_s6cxg")
 
 [node name="Left2" type="RigidBody3D" parent="Is" unique_id=1989491968]
 transform = Transform3D(-0.9929547, 0.11849479, 0, -0.11849479, -0.9929547, 0, 0, 0, 1, 0, 0.042242706, -0.038550735)
+collision_layer = 256
+collision_mask = 256
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 center_of_mass_mode = 1
@@ -69,6 +73,8 @@ node_b = NodePath("../Left2")
 
 [node name="Right" type="RigidBody3D" parent="Is" unique_id=374613326]
 transform = Transform3D(-0.9238819, 0.38267758, 0, -0.38267758, -0.9238819, 0, 0, 0, 1, -0.60689586, 0.03529513, -0.038550735)
+collision_layer = 256
+collision_mask = 256
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 center_of_mass_mode = 1
