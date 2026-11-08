@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://dgje2vy5anynv"]
 
 [ext_resource type="Script" uid="uid://cimeqauqhrtgo" path="res://enemies/room_with_enemies.gd" id="1_gvfet"]
+[ext_resource type="PackedScene" uid="uid://ccssoawcuuow4" path="res://enemies/Bed.glb" id="2_6aog7"]
+[ext_resource type="Texture2D" uid="uid://dw7bugdlbtwsk" path="res://enemies/Pasted image 20261108154622.png" id="2_hwcwt"]
 [ext_resource type="PackedScene" uid="uid://c8d220k74p1h4" path="res://enemies/DustBunny.tscn" id="2_ydiif"]
 [ext_resource type="PackedScene" uid="uid://mjhmfuxjws3f" path="res://enemies/beer_can.tscn" id="3_8iyv3"]
 [ext_resource type="PackedScene" uid="uid://c7wwk8ft0cy87" path="res://scenes/player.tscn" id="3_b83cu"]
 [ext_resource type="AudioStream" uid="uid://bfrrntmm45bb5" path="res://music/May the dust.wav" id="5_hwcwt"]
 [ext_resource type="PackedScene" uid="uid://cace7mpsw37oh" path="res://music/main_sucky_theme.tscn" id="6_0elac"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5m2fx"]
+size = Vector3(11.427368, 2.8439941, 4.6470337)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gvfet"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,11 +26,24 @@ glow_enabled = true
 glow_intensity = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6fje"]
+albedo_texture = ExtResource("2_hwcwt")
+uv1_scale = Vector3(0.02, 0.02, 0.02)
+uv1_triplanar = true
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_5m2fx"]
 
 [node name="Room" type="Node3D" unique_id=405966503]
 script = ExtResource("1_gvfet")
+
+[node name="Bed" type="StaticBody3D" parent="." unique_id=1368416668]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -24.339981, -23.488317, -20.699137)
+metadata/_edit_group_ = true
+
+[node name="Bed" parent="Bed" unique_id=286318820 instance=ExtResource("2_6aog7")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed" unique_id=124709643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02520752, 0.869751, 0.03793335)
+shape = SubResource("BoxShape3D_5m2fx")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=747194708]
 environment = SubResource("Environment_hepi8")
