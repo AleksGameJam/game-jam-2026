@@ -87,14 +87,14 @@ gravity_space_override = 1
 gravity_point = true
 gravity_point_center = Vector3(0, 0, 2)
 gravity_direction = Vector3(0, 0, 2)
-gravity = 1000.0
+gravity = 1500.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ScaleParent/Area3D" unique_id=1531094164]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0.7433605)
 mesh = SubResource("CylinderMesh_5m2fx")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="ScaleParent/Area3D" unique_id=621210066]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0.7433605)
+transform = Transform3D(1.4, 0, 0, 0, -6.119594e-08, 1.4, 0, -1.4, -6.119594e-08, 0, 0, 0.7433605)
 shape = SubResource("ConvexPolygonShape3D_nf8fl")
 
 [node name="KillArea" type="Area3D" parent="ScaleParent" unique_id=16346796]
