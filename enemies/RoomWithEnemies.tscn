@@ -53,6 +53,192 @@ omni_range = 50.0
 [node name="Bouncy3" parent="Stuff/Enemies" unique_id=797332052 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, 0)
 
+[node name="Bouncy4" parent="Stuff/Enemies" unique_id=824512235 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1652882, 0, 0)
+
+[node name="Bouncy5" parent="Stuff/Enemies" unique_id=628312087 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3880885, 0, 0)
+
+[node name="Bouncy2" parent="Stuff/Enemies" unique_id=1273673659 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3476377)
+
+[node name="Bouncy6" parent="Stuff/Enemies" unique_id=1029226967 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, 1.3476377)
+
+[node name="Bouncy7" parent="Stuff/Enemies" unique_id=1604508205 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1652882, 0, 1.3476377)
+
+[node name="Bouncy8" parent="Stuff/Enemies" unique_id=1888194812 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3880885, 0, 1.3476377)
+
+[node name="Bouncy9" parent="Stuff/Enemies" unique_id=1513736502 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.6568305)
+
+[node name="Bouncy10" parent="Stuff/Enemies" unique_id=1553356742 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, 2.6568305)
+
+[node name="Bouncy11" parent="Stuff/Enemies" unique_id=47238816 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1652882, 0, 2.6568305)
+
+[node name="Bouncy12" parent="Stuff/Enemies" unique_id=1402465705 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3880885, 0, 2.6568305)
+
+[node name="Bouncy13" parent="Stuff/Enemies" unique_id=359810569 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.9668229)
+
+[node name="Bouncy14" parent="Stuff/Enemies" unique_id=1252430752 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, 3.9668229)
+
+[node name="Bouncy15" parent="Stuff/Enemies" unique_id=294980470 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1652882, 0, 3.9668229)
+
+[node name="Bouncy16" parent="Stuff/Enemies" unique_id=309540858 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3880885, 0, 3.9668229)
+
+[node name="Bouncy17" parent="Stuff/Enemies" unique_id=1502225636 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.334631)
+
+[node name="Bouncy18" parent="Stuff/Enemies" unique_id=901825915 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, -5.334631)
+
+[node name="Bouncy19" parent="Stuff/Enemies" unique_id=566228311 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1652882, 0, -5.334631)
+
+[node name="Bouncy20" parent="Stuff/Enemies" unique_id=1547730898 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3880885, 0, -5.334631)
+
+[node name="Bouncy21" parent="Stuff/Enemies" unique_id=1076216653 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.9869933)
+
+[node name="Bouncy22" parent="Stuff/Enemies" unique_id=989388936 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, -3.9869933)
+
+[node name="Bouncy23" parent="Stuff/Enemies" unique_id=1688912061 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1652882, 0, -3.9869933)
+
+[node name="Bouncy24" parent="Stuff/Enemies" unique_id=43655094 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3880885, 0, -3.9869933)
+
+[node name="Bouncy25" parent="Stuff/Enemies" unique_id=1899249259 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.6778004)
+
+[node name="Bouncy26" parent="Stuff/Enemies" unique_id=766794444 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, -2.6778004)
+
+[node name="Bouncy27" parent="Stuff/Enemies" unique_id=604979927 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1652882, 0, -2.6778004)
+
+[node name="Bouncy28" parent="Stuff/Enemies" unique_id=1727812123 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3880885, 0, -2.6778004)
+
+[node name="Bouncy29" parent="Stuff/Enemies" unique_id=11859414 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.3678081)
+
+[node name="Bouncy30" parent="Stuff/Enemies" unique_id=1461129414 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9971092, 0, -1.3678081)
+
+[node name="Bouncy31" parent="Stuff/Enemies" unique_id=25516834 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1652882, 0, -1.3678081)
+
+[node name="Bouncy32" parent="Stuff/Enemies" unique_id=251754373 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3880885, 0, -1.3678081)
+
+[node name="Bouncy33" parent="Stuff/Enemies" unique_id=2133903462 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.702802, 0, -5.334631)
+
+[node name="Bouncy34" parent="Stuff/Enemies" unique_id=54485519 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.699911, 0, -5.334631)
+
+[node name="Bouncy35" parent="Stuff/Enemies" unique_id=1915971416 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8680906, 0, -5.334631)
+
+[node name="Bouncy36" parent="Stuff/Enemies" unique_id=949182580 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.090891, 0, -5.334631)
+
+[node name="Bouncy37" parent="Stuff/Enemies" unique_id=1099164742 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.702802, 0, -3.9869933)
+
+[node name="Bouncy38" parent="Stuff/Enemies" unique_id=1910322246 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.699911, 0, -3.9869933)
+
+[node name="Bouncy39" parent="Stuff/Enemies" unique_id=1957543351 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8680906, 0, -3.9869933)
+
+[node name="Bouncy40" parent="Stuff/Enemies" unique_id=715043626 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.090891, 0, -3.9869933)
+
+[node name="Bouncy41" parent="Stuff/Enemies" unique_id=1013263063 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.702802, 0, -2.6778004)
+
+[node name="Bouncy42" parent="Stuff/Enemies" unique_id=1940309826 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.699911, 0, -2.6778004)
+
+[node name="Bouncy43" parent="Stuff/Enemies" unique_id=845972692 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8680906, 0, -2.6778004)
+
+[node name="Bouncy44" parent="Stuff/Enemies" unique_id=40198782 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.090891, 0, -2.6778004)
+
+[node name="Bouncy45" parent="Stuff/Enemies" unique_id=1156712108 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.702802, 0, -1.3678081)
+
+[node name="Bouncy46" parent="Stuff/Enemies" unique_id=773092430 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.699911, 0, -1.3678081)
+
+[node name="Bouncy47" parent="Stuff/Enemies" unique_id=298510013 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8680906, 0, -1.3678081)
+
+[node name="Bouncy48" parent="Stuff/Enemies" unique_id=2144318032 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.090891, 0, -1.3678081)
+
+[node name="Bouncy49" parent="Stuff/Enemies" unique_id=1272543623 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.702802, 0, 0.053679943)
+
+[node name="Bouncy50" parent="Stuff/Enemies" unique_id=116985352 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.699911, 0, 0.053679943)
+
+[node name="Bouncy51" parent="Stuff/Enemies" unique_id=1220461189 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8680906, 0, 0.053679943)
+
+[node name="Bouncy52" parent="Stuff/Enemies" unique_id=2047301117 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.090891, 0, 0.053679943)
+
+[node name="Bouncy53" parent="Stuff/Enemies" unique_id=515907314 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.702802, 0, 1.4013176)
+
+[node name="Bouncy54" parent="Stuff/Enemies" unique_id=1257684742 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.699911, 0, 1.4013176)
+
+[node name="Bouncy55" parent="Stuff/Enemies" unique_id=1057635992 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8680906, 0, 1.4013176)
+
+[node name="Bouncy56" parent="Stuff/Enemies" unique_id=1074090705 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.090891, 0, 1.4013176)
+
+[node name="Bouncy57" parent="Stuff/Enemies" unique_id=1716383628 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.702802, 0, 2.7105105)
+
+[node name="Bouncy58" parent="Stuff/Enemies" unique_id=2123868952 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.699911, 0, 2.7105105)
+
+[node name="Bouncy59" parent="Stuff/Enemies" unique_id=1757653823 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8680906, 0, 2.7105105)
+
+[node name="Bouncy60" parent="Stuff/Enemies" unique_id=708938935 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.090891, 0, 2.7105105)
+
+[node name="Bouncy61" parent="Stuff/Enemies" unique_id=1817324721 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.702802, 0, 4.020503)
+
+[node name="Bouncy62" parent="Stuff/Enemies" unique_id=1863599646 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.699911, 0, 4.020503)
+
+[node name="Bouncy63" parent="Stuff/Enemies" unique_id=1295553639 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8680906, 0, 4.020503)
+
+[node name="Bouncy64" parent="Stuff/Enemies" unique_id=2103011799 instance=ExtResource("2_ydiif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.090891, 0, 4.020503)
+
 [node name="Beeremies" type="Node3D" parent="Stuff" unique_id=305683070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -23.492435, 0)
 
@@ -61,6 +247,42 @@ transform = Transform3D(-2.185569e-08, -0.49999997, 0.8660254, 0.99999994, -4.37
 
 [node name="BeerCan2" parent="Stuff/Beeremies" unique_id=1746428050 instance=ExtResource("3_8iyv3")]
 transform = Transform3D(-2.185569e-08, -0.9951972, -0.09789094, 0.99999994, -1.8045045e-08, -3.9812836e-08, 3.785517e-08, -0.09789094, 0.99519706, -1.8891538, 0.006467819, -5.4541483)
+
+[node name="BeerCan3" parent="Stuff/Beeremies" unique_id=1037485333 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.49999997, 0.8660254, 0.99999994, -4.371139e-08, 0, 3.785517e-08, 0.86602545, 0.49999994, 15.650388, 0.006467819, -10.481214)
+
+[node name="BeerCan4" parent="Stuff/Beeremies" unique_id=1621285988 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.9951972, -0.09789094, 0.99999994, -1.8045045e-08, -3.9812836e-08, 3.785517e-08, -0.09789094, 0.99519706, 13.739888, 0.006467819, -15.910998)
+
+[node name="BeerCan5" parent="Stuff/Beeremies" unique_id=2003154122 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.49999997, 0.8660254, 0.99999994, -4.371139e-08, 0, 3.785517e-08, 0.86602545, 0.49999994, -14.225329, 0.006467819, -13.924718)
+
+[node name="BeerCan6" parent="Stuff/Beeremies" unique_id=530153141 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.9951972, -0.09789094, 0.99999994, -1.8045045e-08, -3.9812836e-08, 3.785517e-08, -0.09789094, 0.99519706, -16.13583, 0.006467819, -19.354504)
+
+[node name="BeerCan7" parent="Stuff/Beeremies" unique_id=1743799595 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.49999997, 0.8660254, 0.99999994, -4.371139e-08, 0, 3.785517e-08, 0.86602545, 0.49999994, -10.707628, 0.006467819, 1.1144543)
+
+[node name="BeerCan8" parent="Stuff/Beeremies" unique_id=1299740730 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.9951972, -0.09789094, 0.99999994, -1.8045045e-08, -3.9812836e-08, 3.785517e-08, -0.09789094, 0.99519706, -12.618129, 0.006467819, -4.3153315)
+
+[node name="BeerCan9" parent="Stuff/Beeremies" unique_id=158776969 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-4.1592635e-08, -0.9515288, -0.30755973, 0.9999999, -4.3711385e-08, 0, -1.3443865e-08, -0.30755976, 0.9515287, -25.447796, 0.006467819, 26.118517)
+
+[node name="BeerCan10" parent="Stuff/Beeremies" unique_id=1329702737 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-4.159264e-08, -0.11268352, -0.9936309, 0.9999999, -1.8045043e-08, -3.9812832e-08, -1.34438665e-08, -0.993631, 0.11268349, -20.538477, 0.006467819, 23.113325)
+
+[node name="BeerCan11" parent="Stuff/Beeremies" unique_id=1263226684 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-4.1592635e-08, -0.9515288, -0.30755973, 0.9999999, -4.3711385e-08, 0, -1.3443865e-08, -0.30755976, 0.9515287, 18.358675, 0.006467819, 19.927546)
+
+[node name="BeerCan12" parent="Stuff/Beeremies" unique_id=733947406 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-4.159264e-08, -0.11268352, -0.9936309, 0.9999999, -1.8045043e-08, -3.9812832e-08, -1.34438665e-08, -0.993631, 0.11268349, 23.267994, 0.006467819, 16.922354)
+
+[node name="BeerCan13" parent="Stuff/Beeremies" unique_id=190778917 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-4.1592635e-08, -0.9515288, -0.30755973, 0.9999999, -4.3711385e-08, 0, -1.3443865e-08, -0.30755976, 0.9515287, 19.499054, 0.006467819, -0.3286457)
+
+[node name="BeerCan14" parent="Stuff/Beeremies" unique_id=1352130867 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-4.159264e-08, -0.11268352, -0.9936309, 0.9999999, -1.8045043e-08, -3.9812832e-08, -1.34438665e-08, -0.993631, 0.11268349, 24.408373, 0.006467819, -3.3338375)
 
 [node name="da snabel zone" parent="Stuff" unique_id=2057323852 instance=ExtResource("3_b83cu")]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -22.26793, 4.901871)
