@@ -13,7 +13,8 @@ func _ready():
 func _on_button_pressed() -> void:
 	queue_free()
 	label_3d.has_started = true
-
+	$"../SpoopyMusic".volume_db = -100
+	$"../SuckWar".playing = true
 
 func _on_skip_pressed() -> void:
 	get_tree().change_scene_to_packed(SUCKER)
