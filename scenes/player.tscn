@@ -345,9 +345,9 @@ mesh = SubResource("CapsuleMesh_47vuo")
 transform = Transform3D(1, -8.6736174e-19, -8.881784e-16, 0, -4.377216e-08, -1, 8.6736174e-19, 1, -4.377216e-08, 0, 1.4, -0.001)
 
 [node name="pivot" type="Node3D" parent="." unique_id=117154268]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.0017452985, 0.9999984, 0, -0.9999984, 0.0017452985, 0, 0, 10.942276)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.0017452984, 0.99999833, 0, -0.99999833, 0.0017452984, 0, 0, 10.942276)
 script = ExtResource("7_smehm")
 
 [node name="Camera3D2" type="Camera3D" parent="pivot" unique_id=1228761083]
-transform = Transform3D(0.9959419, -0.055318583, 0.07099044, 0.08810517, 0.4383252, -0.894488, 0.01836491, 0.89711267, 0.44142026, 0.006, -10, 12)
+transform = Transform3D(1, 0, 0, 0, 0.4226183, -0.90630794, 0, 0.90630794, 0.4226183, 0.006, -10, 12)
 script = ExtResource("7_fjrip")
