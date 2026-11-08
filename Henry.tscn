@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dm70m6cuf7i0c"]
 
 [ext_resource type="PackedScene" uid="uid://qc8kfo7notpe" path="res://henry.glb" id="1_87exc"]
+[ext_resource type="Script" uid="uid://ri3ut22uip5a" path="res://follow_henry.gd" id="2_o6lwl"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_5m2fx"]
 top_radius = 0.1381836
@@ -89,3 +90,30 @@ mesh = SubResource("CylinderMesh_5m2fx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58954674, 0, 0)
 node_a = NodePath("../StaticBody3D")
 node_b = NodePath("../Right")
+
+[node name="Label" type="Label" parent="." unique_id=2118821925]
+offset_left = 60.0
+offset_top = 20.0
+offset_right = 379.0
+offset_bottom = 54.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
+text = "Live Henry reaction"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1409455838]
+offset_left = 59.0
+offset_top = 58.0
+offset_right = 379.0
+offset_bottom = 378.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1123660583]
+handle_input_locally = false
+size = Vector2i(320, 320)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=529800264]
+transform = Transform3D(-1, 2.262668e-08, -8.444392e-08, 0, 0.9659258, 0.25881904, 8.742278e-08, 0.25881904, -0.9659258, 0, 0.4, -2)
+script = ExtResource("2_o6lwl")
