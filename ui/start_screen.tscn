@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jx7ybilyo3b4" path="res://ui/start_screen.gd" id="1_50anp"]
 [ext_resource type="PackedScene" uid="uid://dm70m6cuf7i0c" path="res://Henry.tscn" id="1_s6cxg"]
+[ext_resource type="PackedScene" uid="uid://b6x3ax11lgoww" path="res://explosion/explosion.tscn" id="2_igmpp"]
 [ext_resource type="Script" uid="uid://ofifmfk0in2r" path="res://ui/shake_violently.gd" id="2_nledq"]
 
 [sub_resource type="Animation" id="Animation_s6cxg"]
@@ -104,6 +105,7 @@ sky = SubResource("Sky_o6lwl")
 
 [node name="StartScreen" type="Node3D" unique_id=1844761671]
 script = ExtResource("1_50anp")
+explosion_scene = ExtResource("2_igmpp")
 
 [node name="HenryParent" type="Node3D" parent="." unique_id=1795817085]
 script = ExtResource("2_nledq")

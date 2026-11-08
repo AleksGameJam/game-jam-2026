@@ -1,7 +1,8 @@
 extends Node3D
 
 const ROOM_WITH_ENEMIES = preload("uid://dgje2vy5anynv")
-
+@export var spawn : Node3D
+@export var explosion_scene : PackedScene
 @onready var label_3d: Label3D = $"../Label3D"
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -11,6 +12,8 @@ func _ready():
 
 
 func _on_button_pressed() -> void:
+	var explosion = explosion_scene.instantiate()
+	spawn.add_child(explosion)
 	queue_free()
 	label_3d.has_started = true
 	$"../SpoopyMusic".volume_db = -100

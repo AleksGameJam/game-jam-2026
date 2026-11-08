@@ -54,7 +54,8 @@ autowrap_trim_flags = 64
 width = 900.0
 script = ExtResource("1_gjrx4")
 
-[node name="StartScreen" parent="." unique_id=1844761671 instance=ExtResource("2_thtsq")]
+[node name="StartScreen" parent="." unique_id=1844761671 node_paths=PackedStringArray("spawn") instance=ExtResource("2_thtsq")]
+spawn = NodePath("../Node3D")
 
 [node name="Continue" type="Button" parent="." unique_id=147011989]
 visible = false
@@ -79,5 +80,8 @@ autoplay = true
 
 [node name="SuckWar" type="AudioStreamPlayer" parent="." unique_id=1865524703]
 stream = ExtResource("4_7qc68")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1289905335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13912988)
 
 [connection signal="pressed" from="Continue" to="Label3D" method="_on_continue_pressed"]
