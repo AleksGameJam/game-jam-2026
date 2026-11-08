@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="stuffsucker"
-run/main_scene="uid://bjgkfmp86lhik"
+run/main_scene="uid://bdj8mwevhanmr"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
