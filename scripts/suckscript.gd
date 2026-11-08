@@ -7,6 +7,8 @@ var suckForce = baseSuckForce
 
 var upDog = Vector3.UP
 
+@onready var vacuum_sound = get_tree().get_first_node_in_group("vacuum_sound")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -25,6 +27,9 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_pressed("turbo_mode"):
 		suckForce = 1000
+		vacuum_sound.volume_db = -5.0
+	else:
+		vacuum_sound.volume_db = -15.0
 		
 		
 	

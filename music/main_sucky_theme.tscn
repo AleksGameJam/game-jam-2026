@@ -2,8 +2,14 @@
 
 [ext_resource type="AudioStream" uid="uid://uu0xk2i70dcu" path="res://music/main.wav" id="1_t5dmj"]
 [ext_resource type="Script" uid="uid://dvdd2s6lyg5gn" path="res://enemies/main_sucky_theme_loop.gd" id="2_dyql8"]
+[ext_resource type="AudioStream" uid="uid://gacnmon5kvo4" path="res://music/vacuumSound.wav" id="3_dyql8"]
 
 [node name="MainSuckyTheme" type="AudioStreamPlayer" unique_id=984437928]
 stream = ExtResource("1_t5dmj")
 autoplay = true
 script = ExtResource("2_dyql8")
+
+[node name="VacuumSound" type="AudioStreamPlayer" parent="." unique_id=1259129749 groups=["vacuum_sound"]]
+stream = ExtResource("3_dyql8")
+volume_db = -18.0
+autoplay = true
