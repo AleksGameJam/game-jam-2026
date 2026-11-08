@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dxb84rgmg42f1" path="res://intro/label_3d.gd" id="1_gjrx4"]
 [ext_resource type="PackedScene" uid="uid://c3emt4gmh1s5k" path="res://ui/start_screen.tscn" id="2_thtsq"]
+[ext_resource type="AudioStream" uid="uid://cdigjx1fxb186" path="res://music/creepy-noises.wav" id="3_o3u2j"]
+[ext_resource type="AudioStream" uid="uid://ikn6cmuo7hra" path="res://music/bass2.wav" id="4_7qc68"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uc2yk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -59,5 +61,12 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 32
 text = "Continue"
+
+[node name="SpoopyMusic" type="AudioStreamPlayer" parent="." unique_id=131591892]
+stream = ExtResource("3_o3u2j")
+autoplay = true
+
+[node name="SuckWar" type="AudioStreamPlayer" parent="." unique_id=1865524703]
+stream = ExtResource("4_7qc68")
 
 [connection signal="pressed" from="Continue" to="Label3D" method="_on_continue_pressed"]
