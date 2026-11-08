@@ -5,8 +5,8 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skrcp"]
 albedo_texture = ExtResource("1_gyoa3")
-uv1_scale = Vector3(1.8, 1.8, 1.8)
-uv1_offset = Vector3(-0.03, 0, -0.55)
+uv1_scale = Vector3(0.68, 0.68, 0.68)
+uv1_offset = Vector3(0.47, 0, -0.48)
 uv1_triplanar = true
 uv1_triplanar_sharpness = 130.58263
 uv1_world_triplanar = true
@@ -63,19 +63,19 @@ mesh = SubResource("PrismMesh_1e8py")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="ScaleParent" unique_id=459193785]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.30257088)
-amount = 16
-lifetime = 0.2
+amount = 24
+lifetime = 0.15000000000000002
 mesh = SubResource("CapsuleMesh_5m2fx")
 emission_shape = 6
 emission_ring_axis = Vector3(0, 0, 1)
 emission_ring_height = 1.0
-emission_ring_radius = 2.0
+emission_ring_radius = 3.0
 emission_ring_inner_radius = 0.0
 emission_ring_cone_angle = 0.0
 particle_flag_align_y = true
 gravity = Vector3(0, 0, 0)
-radial_accel_min = -50.0
-radial_accel_max = -50.0
+radial_accel_min = -200.0
+radial_accel_max = -200.0
 scale_amount_curve = SubResource("Curve_1e8py")
 color_ramp = SubResource("Gradient_gyoa3")
 
