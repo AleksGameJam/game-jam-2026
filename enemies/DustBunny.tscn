@@ -21,12 +21,14 @@ linear_damp_mode = 1
 script = ExtResource("1_2iff2")
 
 [node name="Rabbit" parent="." unique_id=52930652 instance=ExtResource("2_6cn8d")]
-transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, 0, -0.103322506, 0.19241437)
+transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, 0, -0.21892563, 0.36781225)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1172073843]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("SphereShape3D_5m2fx")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=789246036]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=883287243]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("SphereShape3D_1e8py")
