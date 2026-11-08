@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bk1ldkuglakh4"]
 
 [ext_resource type="Texture2D" uid="uid://dfygw4jkcynaf" path="res://player_nozzle/red-henry.jpg" id="1_gyoa3"]
-[ext_resource type="Script" uid="uid://diyrnree5qa6u" path="res://player_nozzle/player_nozzle.gd" id="1_nf8fl"]
 [ext_resource type="Script" uid="uid://c7bhwnr1tnrp5" path="res://player_nozzle/kill_area.gd" id="2_8gyx7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skrcp"]
@@ -51,15 +50,18 @@ rings = 2
 points = PackedVector3Array(0, 1.5, -3, 0, 0.49980426, -2.0003915, -2.1213782, 1.5, -2.1213782, 2.120791, 1.5, -2.1213782, 1.4136648, 0.49980426, -1.4142522, 0, -1.5, 0, -1.4142522, 0.49980426, -1.4142522, -2.0003915, 0.49980426, 0, -3, 1.5, 0, 3, 1.5, 0, -1.4142522, 0.49980426, 1.4136648, 2.120791, 1.5, 2.120791, 0, 1.5, 3, -2.1213782, 1.5, 2.120791)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1e8py"]
-size = Vector3(0.72875977, 0.31689453, 0.09567261)
+size = Vector3(0.9846802, 0.5010376, 0.09567261)
 
 [node name="PlayerNozzle" type="Node3D" unique_id=830472487]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=204684545]
+[node name="ScaleParent" type="Node3D" parent="." unique_id=1345887777]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ScaleParent" unique_id=204684545]
 transform = Transform3D(-4.371139e-08, 0, 1, 1, -4.371139e-08, 4.371139e-08, 4.371139e-08, 1, 1.9106855e-15, 0, 0, 0)
 mesh = SubResource("PrismMesh_1e8py")
 
-[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=459193785]
+[node name="CPUParticles3D" type="CPUParticles3D" parent="ScaleParent" unique_id=459193785]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.30257088)
 amount = 16
 lifetime = 0.2
@@ -77,30 +79,32 @@ radial_accel_max = -50.0
 scale_amount_curve = SubResource("Curve_1e8py")
 color_ramp = SubResource("Gradient_gyoa3")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=260327744]
+[node name="Area3D" type="Area3D" parent="ScaleParent" unique_id=260327744]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+collision_layer = 8
+collision_mask = 8
 gravity_space_override = 1
 gravity_point = true
 gravity_point_center = Vector3(0, 0, 2)
 gravity_direction = Vector3(0, 0, 2)
-gravity = 200.0
-script = ExtResource("1_nf8fl")
+gravity = 1000.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=1531094164]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ScaleParent/Area3D" unique_id=1531094164]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0.7433605)
-visible = false
 mesh = SubResource("CylinderMesh_5m2fx")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D" unique_id=621210066]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="ScaleParent/Area3D" unique_id=621210066]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0.7433605)
 shape = SubResource("ConvexPolygonShape3D_nf8fl")
 
-[node name="KillArea" type="Area3D" parent="." unique_id=16346796]
+[node name="KillArea" type="Area3D" parent="ScaleParent" unique_id=16346796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.21749008)
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("2_8gyx7")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KillArea" unique_id=847072228]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012329102, 0.0007324219, -0.31505364)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ScaleParent/KillArea" unique_id=847072228]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00289917, -0.0028381348, -0.38012314)
 shape = SubResource("BoxShape3D_1e8py")
 
-[connection signal="body_entered" from="KillArea" to="KillArea" method="_on_body_entered"]
+[connection signal="body_entered" from="ScaleParent/KillArea" to="ScaleParent/KillArea" method="_on_body_entered"]

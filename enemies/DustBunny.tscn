@@ -37,6 +37,8 @@ radius = 0.25
 radius = 0.3
 
 [node name="DustBunny" type="RigidBody3D" unique_id=1832415645]
+collision_layer = 9
+collision_mask = 9
 physics_material_override = SubResource("PhysicsMaterial_1e8py")
 linear_damp_mode = 1
 script = ExtResource("1_2iff2")
