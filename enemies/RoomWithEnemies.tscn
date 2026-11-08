@@ -46,9 +46,6 @@ omni_range = 50.0
 
 [node name="Stuff" type="Node3D" parent="." unique_id=451969678]
 
-[node name="Camera3D" type="Camera3D" parent="Stuff" unique_id=1365698334]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.261594, 29.85607)
-
 [node name="Enemies" type="Node3D" parent="Stuff" unique_id=1629445548]
 
 [node name="Bouncy" parent="Stuff/Enemies" unique_id=1832415645 instance=ExtResource("2_ydiif")]

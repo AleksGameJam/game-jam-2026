@@ -1,6 +1,6 @@
 extends Node3D
 
-const SUCKER = preload("uid://bjgkfmp86lhik")
+const ROOM_WITH_ENEMIES = preload("uid://dgje2vy5anynv")
 
 @onready var label_3d: Label3D = $"../Label3D"
 
@@ -17,4 +17,4 @@ func _on_button_pressed() -> void:
 	$"../SuckWar".playing = true
 
 func _on_skip_pressed() -> void:
-	get_tree().change_scene_to_packed(SUCKER)
+	get_tree().change_scene_to_packed(ROOM_WITH_ENEMIES)

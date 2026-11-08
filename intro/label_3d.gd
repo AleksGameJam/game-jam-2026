@@ -1,5 +1,5 @@
 extends Label3D
-const SUCKER = preload("uid://bjgkfmp86lhik")
+const ROOM_WITH_ENEMIES = preload("uid://dgje2vy5anynv")
 
 @export var speed: float = 0.2 # Units per second
 var has_started = false
@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 
 
 func _on_continue_pressed() -> void:
-	get_tree().change_scene_to_packed(SUCKER)
+	get_tree().change_scene_to_packed(ROOM_WITH_ENEMIES)
