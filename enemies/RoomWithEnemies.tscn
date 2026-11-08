@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cimeqauqhrtgo" path="res://enemies/room_with_enemies.gd" id="1_gvfet"]
 [ext_resource type="PackedScene" uid="uid://c8d220k74p1h4" path="res://enemies/DustBunny.tscn" id="2_ydiif"]
+[ext_resource type="PackedScene" uid="uid://mjhmfuxjws3f" path="res://enemies/beer_can.tscn" id="3_8iyv3"]
 [ext_resource type="PackedScene" uid="uid://c7wwk8ft0cy87" path="res://scenes/player.tscn" id="3_b83cu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gvfet"]
@@ -584,6 +585,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0038285, 1.3696064, -1.090
 
 [node name="Bouncy180" parent="Stuff/Enemies" unique_id=2100899720 instance=ExtResource("2_ydiif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1304264, 1.3696064, -1.0902629)
+
+[node name="Beeremies" type="Node3D" parent="Stuff" unique_id=305683070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -23.492435, 0)
+
+[node name="BeerCan" parent="Stuff/Beeremies" unique_id=481089183 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.49999997, 0.8660254, 0.99999994, -4.371139e-08, 0, 3.785517e-08, 0.86602545, 0.49999994, 0.021345854, 0.006467819, -0.024363756)
+
+[node name="BeerCan2" parent="Stuff/Beeremies" unique_id=1746428050 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.9951972, -0.09789094, 0.99999994, -1.8045045e-08, -3.9812836e-08, 3.785517e-08, -0.09789094, 0.99519706, -1.8891538, 0.006467819, -5.4541483)
+
+[node name="BeerCan3" parent="Stuff/Beeremies" unique_id=1961732292 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.9951972, -0.09789094, 0.99999994, -1.8045045e-08, -3.9812836e-08, 3.785517e-08, -0.09789094, 0.99519706, 7.8251767, 0.006467819, -2.2835636)
+
+[node name="BeerCan4" parent="Stuff/Beeremies" unique_id=665100434 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.20804143, -0.97811997, 0.99999994, 3.2480013e-08, -2.9252936e-08, 3.7855166e-08, -0.9781201, 0.2080414, -11.3577, 0.006467819, 1.2216969)
+
+[node name="BeerCan5" parent="Stuff/Beeremies" unique_id=465893989 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.20804143, -0.97811997, 0.99999994, 3.2480013e-08, -2.9252936e-08, 3.7855166e-08, -0.9781201, 0.2080414, -6.8076105, 0.006467819, -7.6137486)
+
+[node name="BeerCan6" parent="Stuff/Beeremies" unique_id=676541502 instance=ExtResource("3_8iyv3")]
+transform = Transform3D(-2.185569e-08, -0.20804143, -0.97811997, 0.99999994, 3.2480013e-08, -2.9252936e-08, 3.7855166e-08, -0.9781201, 0.2080414, 12.194621, 0.006467819, 6.347224)
 
 [node name="da snabel zone" parent="Stuff" unique_id=2057323852 instance=ExtResource("3_b83cu")]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -22.26793, 4.901871)

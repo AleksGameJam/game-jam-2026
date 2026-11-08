@@ -28,3 +28,7 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	# Keep the tumble/spin speed perfect (forces engine not to slow down rotation)
 	if state.angular_velocity.length() > 0:
 		state.angular_velocity = state.angular_velocity.normalized() * spin_speed
+
+
+func suck():
+	queue_free()
