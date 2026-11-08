@@ -32,6 +32,14 @@ uv1_triplanar = true
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_5m2fx"]
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_uu3oo"]
+height = 4.9799805
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0elac"]
+top_radius = 2.2
+bottom_radius = 2.2
+height = 0.5982666
+
 [node name="Room" type="Node3D" unique_id=405966503]
 script = ExtResource("1_gvfet")
 
@@ -337,3 +345,23 @@ offset_right = 1309.0
 offset_bottom = 606.0
 theme_override_font_sizes/font_size = 120
 text = "You sucked!"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=274514727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.563866, -21.547672, 6.0248256)
+mesh = SubResource("CylinderMesh_uu3oo")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=348695858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.929562, -21.547672, 3.4956303)
+mesh = SubResource("CylinderMesh_uu3oo")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=404683881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.522033, -21.547672, 6.0248256)
+mesh = SubResource("CylinderMesh_uu3oo")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1889541539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.522033, -21.547672, 2.9682012)
+mesh = SubResource("CylinderMesh_uu3oo")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=551599995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.630352, -18.97559, 4.1432323)
+mesh = SubResource("CylinderMesh_0elac")
