@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cace7mpsw37oh"]
+
+[ext_resource type="AudioStream" uid="uid://uu0xk2i70dcu" path="res://music/main.wav" id="1_t5dmj"]
+[ext_resource type="Script" uid="uid://dvdd2s6lyg5gn" path="res://enemies/main_sucky_theme_loop.gd" id="2_dyql8"]
+
+[node name="MainSuckyTheme" type="AudioStreamPlayer" unique_id=984437928]
+stream = ExtResource("1_t5dmj")
+autoplay = true
+script = ExtResource("2_dyql8")
