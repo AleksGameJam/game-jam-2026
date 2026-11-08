@@ -1,6 +1,9 @@
 extends RigidBody3D
 
-var suckForce = 0.1
+var liftForce = -30
+
+var baseSuckForce = 2;
+var suckForce = baseSuckForce
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,11 +18,11 @@ func _process(delta: float) -> void:
 		
 	
 	apply_central_force(transform.basis*Vector3.UP*suckForce)
-	suckForce = 0.1
+	suckForce = baseSuckForce
 	
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_down", "ui_up")
 	#apply_torque(Vector3(input_dir.y*200, input_dir.x*-200, 0))
-	apply_torque(Vector3(0, input_dir.x*-100, 0))
+	apply_torque(Vector3(0, input_dir.x*liftForce, 0))
 	
 
 	#apply_central_force()

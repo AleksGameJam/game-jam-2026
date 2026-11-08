@@ -2,7 +2,7 @@ extends RigidBody3D
 
 @onready var camera = $"../Camera3D"
 
-var force := 200;
+var force := 20;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,6 +27,6 @@ func _process(delta: float) -> void:
 	
 	#global_position = Vector3(global_position.x + input_dir.x, global_position.y + input_dir.y, 0);
 
-	apply_torque(Vector3(0, input_dir.x*-200, 0))
+	apply_torque(Vector3(0, input_dir.x*-force, 0))
 	
 	pass

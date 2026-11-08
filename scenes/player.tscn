@@ -6,6 +6,11 @@
 [ext_resource type="Script" uid="uid://bp5e2fm04idl5" path="res://scenes/da_pitch_zone.gd" id="3_tuyoq"]
 [ext_resource type="Script" uid="uid://cf8ql738bnvnj" path="res://scripts/suckscript.gd" id="4_dqkch"]
 [ext_resource type="PackedScene" uid="uid://bk1ldkuglakh4" path="res://player_nozzle/player_nozzle.tscn" id="5_qlg0r"]
+[ext_resource type="Script" uid="uid://qjqmryfbkesl" path="res://scripts/camera_script.gd" id="7_fjrip"]
+[ext_resource type="Script" uid="uid://dfq0f5uyyj1ld" path="res://scenes/pivot_script.gd" id="7_smehm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tuyoq"]
+friction = 0.25
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dp7al"]
 size = Vector3(2, 2, 2)
@@ -30,37 +35,41 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 mass = 10.0
+physics_material_override = SubResource("PhysicsMaterial_tuyoq")
 linear_damp = 0.65
 angular_damp = 100.0
 script = ExtResource("1_i3pqv")
 
 [node name="Henry" parent="." unique_id=1375609512 instance=ExtResource("2_tuyoq")]
-transform = Transform3D(2, 0, 0, 0, -8.742278e-08, -2, 0, 2, -8.742278e-08, 0, 0, 0.8)
+transform = Transform3D(2, 0, 0, 0, 1.9999989, -0.001746729, 0, 0.001746729, 1.9999989, 0, 0, 10.891765)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=678819758]
-transform = Transform3D(1, 0, 0, 7.450581e-09, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(0.75, -5.5879346e-09, 0, 4.7259735e-12, 0.00063430954, 0.74999976, -5.5879323e-09, -0.74999976, 0.00063430954, 0, 0, 10.891067)
 shape = SubResource("BoxShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=898554336]
-transform = Transform3D(1, 0, 0, 7.450581e-09, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1, -7.450581e-09, 0, 6.5067474e-12, 0.00087332085, 0.99999946, -7.4505766e-09, -0.99999946, 0.00087332085, 0, 0, 10.891067)
 visible = false
 mesh = SubResource("BoxMesh_a6aca")
 
 [node name="ConeTwistJoint3D" type="ConeTwistJoint3D" parent="." unique_id=1054736220]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.0008733206, 0.99999934, 0, -0.99999934, 0.0008733206, 0, 0, 10.891067)
 node_a = NodePath("..")
 node_b = NodePath("../RigidBody3D")
+exclude_nodes_from_collision = false
 swing_span = 0.0
 twist_span = 0.0
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1205051440]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 1.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, 9.391067)
 axis_lock_linear_y = true
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.8
 script = ExtResource("2_hqtel")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1885840720]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1314957066]
@@ -73,14 +82,15 @@ node_b = NodePath("../../RigidBody3D2")
 exclude_nodes_from_collision = false
 swing_span = 0.61086524
 twist_span = 4.712389
-bias = 0.05
 
 [node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=1620950329]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 3.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, 7.391068)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2" unique_id=768151564]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2" unique_id=2077449721]
@@ -93,14 +103,15 @@ node_b = NodePath("../../RigidBody3D3")
 exclude_nodes_from_collision = false
 swing_span = 1.3089969
 twist_span = 4.712389
-bias = 0.05
 
 [node name="RigidBody3D3" type="RigidBody3D" parent="." unique_id=1360901744]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 5.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, 5.3910694)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D3" unique_id=487798522]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D3" unique_id=940118774]
@@ -113,14 +124,15 @@ node_b = NodePath("../../RigidBody3D4")
 exclude_nodes_from_collision = false
 swing_span = 1.3089969
 twist_span = 4.712389
-bias = 0.05
 
 [node name="RigidBody3D4" type="RigidBody3D" parent="." unique_id=189693018]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 7.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, 3.3910706)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D4" unique_id=997557428]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D4" unique_id=137455245]
@@ -133,14 +145,15 @@ node_b = NodePath("../../RigidBody3D5")
 exclude_nodes_from_collision = false
 swing_span = 1.3089969
 twist_span = 4.712389
-bias = 0.05
 
 [node name="RigidBody3D5" type="RigidBody3D" parent="." unique_id=1514127660]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 9.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, 1.3910719)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5" unique_id=1044286166]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D5" unique_id=415049118]
@@ -153,14 +166,15 @@ node_b = NodePath("../../da rokas zone (rigid)")
 exclude_nodes_from_collision = false
 swing_span = 1.3089969
 twist_span = 4.712389
-bias = 0.05
 
 [node name="da rokas zone (rigid)" type="RigidBody3D" parent="." unique_id=2128512173]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 11.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, -0.60892713)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="da rokas zone (rigid)" unique_id=1929533079]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="da rokas zone (rigid)" unique_id=1498291436]
@@ -172,14 +186,15 @@ node_a = NodePath("..")
 node_b = NodePath("../../RigidBody3D7")
 exclude_nodes_from_collision = false
 twist_span = 4.712389
-bias = 0.05
 
 [node name="RigidBody3D7" type="RigidBody3D" parent="." unique_id=283668078]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 13.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, -2.608926)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D7" unique_id=2098005931]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D7" unique_id=476973496]
@@ -191,14 +206,15 @@ node_a = NodePath("..")
 node_b = NodePath("../../RigidBody3D8")
 exclude_nodes_from_collision = false
 twist_span = 4.712389
-bias = 0.05
 
 [node name="RigidBody3D8" type="RigidBody3D" parent="." unique_id=1849929235]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 15.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, -4.6089253)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D8" unique_id=169916530]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D8" unique_id=1140934046]
@@ -210,14 +226,15 @@ node_a = NodePath("..")
 node_b = NodePath("../../RigidBody3D9")
 exclude_nodes_from_collision = false
 twist_span = 4.712389
-bias = 0.05
 
 [node name="RigidBody3D9" type="RigidBody3D" parent="." unique_id=1216813995]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 17.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, -6.6089234)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D9" unique_id=63595445]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D9" unique_id=1106119089]
@@ -229,14 +246,15 @@ node_a = NodePath("..")
 node_b = NodePath("../../RigidBody3D10")
 exclude_nodes_from_collision = false
 twist_span = 4.712389
-bias = 0.05
 
 [node name="RigidBody3D10" type="RigidBody3D" parent="." unique_id=488491782]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 19.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, -8.608923)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D10" unique_id=1317565128]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D10" unique_id=526120538]
@@ -248,14 +266,15 @@ node_a = NodePath("..")
 node_b = NodePath("../../RigidBody3D11")
 exclude_nodes_from_collision = false
 twist_span = 4.712389
-bias = 0.05
 
 [node name="RigidBody3D11" type="RigidBody3D" parent="." unique_id=1889079113]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 21.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, -10.608922)
 axis_lock_angular_y = true
+mass = 0.8
 gravity_scale = 0.4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D11" unique_id=1861077608]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D11" unique_id=156356715]
@@ -267,13 +286,14 @@ node_a = NodePath("..")
 node_b = NodePath("../../da pitch zone")
 exclude_nodes_from_collision = false
 twist_span = 4.712389
-bias = 0.05
 
 [node name="da pitch zone" type="RigidBody3D" parent="." unique_id=248466977]
-transform = Transform3D(1, 0, 0, 1.4901161e-08, 1, 0, 0, 0, 1, 0, 23.5, 0)
+transform = Transform3D(1, -1.4901161e-08, 0, 1.3013495e-11, 0.00087332085, 0.99999946, -1.4901153e-08, -0.99999946, 0.00087332085, 0, 0, -12.608921)
+mass = 0.8
 gravity_scale = 0.4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="da pitch zone" unique_id=1117973475]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="da pitch zone" unique_id=1153817816]
@@ -286,14 +306,15 @@ node_b = NodePath("../../da handle")
 exclude_nodes_from_collision = false
 swing_span = 1.0471976
 twist_span = 4.712389
-bias = 0.05
 
 [node name="da handle" type="RigidBody3D" parent="." unique_id=134841865]
-transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 25.5, 0)
+transform = Transform3D(1, 0, 0, 0, 0.0008733206, 0.9999992, 0, -0.9999992, 0.0008733206, 0, 0, -14.60892)
+mass = 0.8
 gravity_scale = 0.4
 script = ExtResource("3_tuyoq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="da handle" unique_id=191320158]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="da handle" unique_id=1161959825]
@@ -304,26 +325,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 node_a = NodePath("..")
 node_b = NodePath("../../da snoot")
 exclude_nodes_from_collision = false
-swing_span = 0.2617994
+swing_span = 0.5235988
 twist_span = 4.712389
-bias = 0.05
 
 [node name="da snoot" type="RigidBody3D" parent="." unique_id=63068322]
-transform = Transform3D(1, 0, 0, 1.49011585e-08, 0.9999998, 0, 0, 0, 0.9999998, 0, 27.5, 0)
+transform = Transform3D(1, -1.4901155e-08, 0, 1.3014378e-11, 0.0008733206, 0.9999992, -1.4901149e-08, -0.9999992, 0.0008733206, 0, 0, -16.608915)
+mass = 0.8
 gravity_scale = 0.4
 script = ExtResource("4_dqkch")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="da snoot" unique_id=1590293996]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_dp7al")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="da snoot" unique_id=730935758]
 mesh = SubResource("CapsuleMesh_47vuo")
 
 [node name="PlayerNozzle" parent="da snoot" unique_id=830472487 instance=ExtResource("5_qlg0r")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 0)
+transform = Transform3D(1, -8.6736174e-19, -8.881784e-16, 0, -4.377216e-08, -1, 8.6736174e-19, 1, -4.377216e-08, 0, 1.4, -0.001)
 
-[node name="Node3D" type="Node3D" parent="." unique_id=117154268]
-transform = Transform3D(1, 0, 0, 0, 1.0000004, -7.450581e-09, 0, 7.450581e-09, 1.0000004, 0, -0.048432052, 3.182284)
+[node name="pivot" type="Node3D" parent="." unique_id=117154268]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.0017452985, 0.9999984, 0, -0.9999984, 0.0017452985, 0, 0, 10.942276)
+script = ExtResource("7_smehm")
 
-[node name="Camera3D2" type="Camera3D" parent="Node3D" unique_id=1228761083]
-transform = Transform3D(0.9959419, -0.055318646, 0.07099045, 0.08999884, 0.6121429, -0.78560865, 2.511777e-06, 0.7888096, 0.6146374, 0.0062942505, -11.139333, 6.027177)
+[node name="Camera3D2" type="Camera3D" parent="pivot" unique_id=1228761083]
+transform = Transform3D(0.9959419, -0.055318583, 0.07099044, 0.08810517, 0.4383252, -0.894488, 0.01836491, 0.89711267, 0.44142026, 0.006, -10, 12)
+script = ExtResource("7_fjrip")
