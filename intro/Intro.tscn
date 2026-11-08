@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dxb84rgmg42f1" path="res://intro/label_3d.gd" id="1_gjrx4"]
 [ext_resource type="PackedScene" uid="uid://c3emt4gmh1s5k" path="res://ui/start_screen.tscn" id="2_thtsq"]
 [ext_resource type="AudioStream" uid="uid://cdigjx1fxb186" path="res://music/creepy-noises.wav" id="3_o3u2j"]
-[ext_resource type="AudioStream" uid="uid://ikn6cmuo7hra" path="res://music/bass2.wav" id="4_7qc68"]
+[ext_resource type="AudioStream" uid="uid://bxunk3ct5kvgd" path="res://music/suckwar.wav" id="4_7qc68"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uc2yk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -33,13 +33,24 @@ fov = 30.0
 [node name="Label3D" type="Label3D" parent="." unique_id=1232713981]
 transform = Transform3D(1, 0, 0, 0, 0.49347132, 0.86976206, 0, -0.86976206, 0.49347132, 0, -2.373247, -2.8849947)
 modulate = Color(0, 1, 0, 1)
-text = "
-Your wife just left you. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.
+text = "Some time ago, in what seems like a galaxy far, far away....
+Dark times have fallen upon the household.
 
-During the battle, Rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.
+Your partner has left you. The dishes remain unwashed, the floors are buried beneath layers of dust, and chaos has spread to every corner of your once-peaceful home.
 
-Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy...."
+From the shadows beneath the furniture, an ancient evil has risen.
+
+THE DUST BUNNIES.
+
+Once harmless creatures of forgotten corners, they have grown in numbers, gathering strength and plotting to take over the entire house.
+
+With no one left to stand against them, the household faces certain doom.
+
+But all hope is not lost.
+
+Armed with nothing but a vacuum cleaner and a questionable amount of determination, an unlikely hero must rise to face the growing darkness."
 autowrap_mode = 2
+autowrap_trim_flags = 64
 width = 900.0
 script = ExtResource("1_gjrx4")
 
