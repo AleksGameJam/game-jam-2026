@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bdj8mwevhanmr"]
 
 [ext_resource type="Script" uid="uid://dxb84rgmg42f1" path="res://intro/label_3d.gd" id="1_gjrx4"]
+[ext_resource type="PackedScene" uid="uid://c3emt4gmh1s5k" path="res://ui/start_screen.tscn" id="2_thtsq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uc2yk"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,3 +40,5 @@ Pursued by the Empire's sinister agents, Princess Leia races home aboard her sta
 autowrap_mode = 2
 width = 900.0
 script = ExtResource("1_gjrx4")
+
+[node name="StartScreen" parent="." unique_id=1844761671 instance=ExtResource("2_thtsq")]
