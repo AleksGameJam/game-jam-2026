@@ -32,13 +32,23 @@ uv1_triplanar = true
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_5m2fx"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6aog7"]
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_uu3oo"]
+material = SubResource("StandardMaterial3D_6aog7")
 height = 4.9799805
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_auac0"]
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_0elac"]
+material = SubResource("StandardMaterial3D_auac0")
 top_radius = 2.2
 bottom_radius = 2.2
 height = 0.5982666
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5m2fx"]
+height = 5.240967
+radius = 2.203125
 
 [node name="Room" type="Node3D" unique_id=405966503]
 script = ExtResource("1_gvfet")
@@ -324,6 +334,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -24.00186, 0)
 [node name="Ground" type="CollisionShape3D" parent="Ground" unique_id=1832173895]
 shape = SubResource("WorldBoundaryShape3D_5m2fx")
 
+[node name="Stool" type="RigidBody3D" parent="Ground" unique_id=1032738131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.334156, 4.1111126, 18.38451)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/Stool" unique_id=274514727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2186165, -0.38820457, 0.3567729)
+mesh = SubResource("CylinderMesh_uu3oo")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Ground/Stool" unique_id=348695858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5843124, -0.38820457, -1.3856902)
+mesh = SubResource("CylinderMesh_uu3oo")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Ground/Stool" unique_id=404683881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82321644, -0.38820457, 0.3567729)
+mesh = SubResource("CylinderMesh_uu3oo")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Ground/Stool" unique_id=1889541539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82321644, -0.38820457, -1.9131193)
+mesh = SubResource("CylinderMesh_uu3oo")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Ground/Stool" unique_id=551599995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28510284, 2.183878, -0.73808813)
+mesh = SubResource("CylinderMesh_0elac")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/Stool" unique_id=418670306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3132229, -0.2244873, -0.7517338)
+shape = SubResource("CylinderShape3D_5m2fx")
+
 [node name="YouWon" type="Control" parent="." unique_id=185767342]
 visible = false
 layout_mode = 3
@@ -346,22 +383,29 @@ offset_bottom = 606.0
 theme_override_font_sizes/font_size = 120
 text = "You sucked!"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=274514727]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.563866, -21.547672, 6.0248256)
+[node name="Stool2" type="RigidBody3D" parent="." unique_id=1210757758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.698322, -19.890747, -21.608467)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Stool2" unique_id=1719334891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2186165, -0.38820457, 0.3567729)
 mesh = SubResource("CylinderMesh_uu3oo")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=348695858]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.929562, -21.547672, 3.4956303)
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Stool2" unique_id=1237030863]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5843124, -0.38820457, -1.3856902)
 mesh = SubResource("CylinderMesh_uu3oo")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=404683881]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.522033, -21.547672, 6.0248256)
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Stool2" unique_id=1826625662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82321644, -0.38820457, 0.3567729)
 mesh = SubResource("CylinderMesh_uu3oo")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1889541539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.522033, -21.547672, 2.9682012)
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Stool2" unique_id=2049833009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.82321644, -0.38820457, -1.9131193)
 mesh = SubResource("CylinderMesh_uu3oo")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=551599995]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.630352, -18.97559, 4.1432323)
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Stool2" unique_id=1758466104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28510284, 2.183878, -0.73808813)
 mesh = SubResource("CylinderMesh_0elac")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stool2" unique_id=724891137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3132229, -0.2244873, -0.7517338)
+shape = SubResource("CylinderShape3D_5m2fx")
