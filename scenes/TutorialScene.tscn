@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://kc33ehs63mvv"]
+
+[ext_resource type="PackedScene" uid="uid://c7wwk8ft0cy87" path="res://scenes/player.tscn" id="1_vgu8r"]
+
+[sub_resource type="Environment" id="Environment_h3dn6"]
+
+[node name="TutorialScene" type="Node3D" unique_id=1159428588]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=533472152]
+environment = SubResource("Environment_h3dn6")
+
+[node name="da snabel zone" parent="." unique_id=2057323852 instance=ExtResource("1_vgu8r")]

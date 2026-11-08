@@ -8,7 +8,7 @@ func _process(delta: float) -> void:
 	# Move up along the node's local Y-axis gradually
 	if has_started:
 		translate(Vector3.UP * speed * delta)
-		await get_tree().create_timer(10.0).timeout
+		await get_tree().create_timer(33.0).timeout
 		$"../Continue".visible = true
 
 
