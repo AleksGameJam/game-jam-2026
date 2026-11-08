@@ -2,8 +2,10 @@ extends RigidBody3D
 
 var liftForce = -30
 
-var baseSuckForce = 2;
+var baseSuckForce = 20;
 var suckForce = baseSuckForce
+
+var upDog = Vector3.UP
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,11 +15,20 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#var direction := (Vector3(input_dir.x, input_dir.y, 0)).normalized()
-	if Input.is_action_pressed("rotate_left"):
-		suckForce = 1000
+	if Input.is_action_just_pressed("turbo_mode"):
+		upDog = transform.basis*Vector3.UP
+		
+		#if Input.is_action_just_released("rotate_left"):
+	if !Input.is_action_pressed("turbo_mode"):
+		upDog = transform.basis*Vector3.UP
 		
 	
-	apply_central_force(transform.basis*Vector3.UP*suckForce)
+	if Input.is_action_pressed("turbo_mode"):
+		suckForce = 1000
+		
+		
+	
+	apply_central_force(upDog*suckForce)
 	suckForce = baseSuckForce
 	
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_down", "ui_up")
