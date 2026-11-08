@@ -13,3 +13,4 @@ script = ExtResource("2_dyql8")
 stream = ExtResource("3_dyql8")
 volume_db = -18.0
 autoplay = true
+script = ExtResource("2_dyql8")
