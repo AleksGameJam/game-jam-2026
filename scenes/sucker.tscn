@@ -14,7 +14,7 @@ albedo_texture = ExtResource("3_edx8b")
 [node name="Node3D" type="Node3D" unique_id=1413007745]
 
 [node name="da snabel zone" parent="." unique_id=2057323852 instance=ExtResource("1_t6l7b")]
-transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 0.66495633, -10.728748)
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0.035622597, -0.0065731257, -10.733406)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2034095861]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)

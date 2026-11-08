@@ -12,11 +12,6 @@ func _process(delta: float) -> void:
 	
 	#var angle = camera.global_position.signed_angle_to(handle.global_position, Vector3.UP)
 	var angle = handle.global_position.signed_angle_to(camera.global_position, Vector3.UP)
-	#global_position.signed_angle_to()
-	print_debug(angle)
-	print_debug(" - ")
-	print_debug(rotation.y)
 
-	#look_at(handle.position, Vector3.UP)
 	rotation.y = move_toward(rotation.y, angle, delta);
 	pass

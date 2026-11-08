@@ -2,7 +2,7 @@ extends RigidBody3D
 
 var liftForce = -30
 
-var baseSuckForce = 20;
+var baseSuckForce = 50;
 var suckForce = baseSuckForce
 
 var upDog = Vector3.UP
