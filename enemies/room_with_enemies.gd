@@ -10,7 +10,8 @@ func _physics_process(_delta):
 	await get_tree().create_timer(1.0).timeout
 	print(get_all_enemies().size())
 	if get_all_enemies().size() == 0:
-		print("you won")
+		$YouWon.visible = true
+		#print("you won")
 	
 
 func get_all_enemies():
