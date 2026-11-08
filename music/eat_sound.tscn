@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c0r5swith6qgh"]
+
+[ext_resource type="AudioStream" uid="uid://36gx73bfho6n" path="res://music/eatsound.wav" id="1_r6qvl"]
+
+[node name="EatSound" type="AudioStreamPlayer3D" unique_id=859217449]
+stream = ExtResource("1_r6qvl")
